@@ -1,0 +1,64 @@
+.header {
+	margin-top: 20px;
+	text-align: left;
+	position: running(header);
+}
+
+@page {
+	margin: 100px;
+	size: A4;
+	font-family: EmbArial;
+	margin-left: 80px;
+	margin-right: 60px;
+
+	@bottom-right {
+		content: element(footer);
+		content: "Page " counter(page) " of " counter(pages);
+		font-family: EmbArial;
+	}
+
+	@top-left {
+		content: element(header);
+	}
+
+}
+
+.footer {
+	position: running(footer);
+}
+
+
+
+
+@font-face {
+	font-family: EmbArial;
+	src: url("IBMPlexMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: EmbArialBold;
+	src: url("IBMPlexMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: EmbArialItalic;
+	src: url("IBMPlexMono-Italic.ttf") format("truetype");
+}
+
+
+
+@font-face {
+	font-family: EmbArialItalicBold;
+	src: url("IBMPlexMono-BoldItalic.ttf") format("truetype");
+}
+
+
+
+
+body {
+	font-family: EmbArial;
+}
+
+body {
+	font-family: EmbArial;
+}

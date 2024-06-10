@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  localstack:
+    image: localstack/localstack:latest
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+      - EDGE_PORT=4566
+      - SERVICES=s3,iam,lambda,dynamodb  # Add services you need
+    ports:
+      - "4566:4566"  # Edge port
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"

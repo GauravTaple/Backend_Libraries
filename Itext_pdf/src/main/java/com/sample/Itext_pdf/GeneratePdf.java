@@ -25,7 +25,7 @@ public class GeneratePdf  {
 
 	public static void main(String[] args) throws FileNotFoundException, MalformedURLException {
 		// Create file with path using predefined classes.
-		String path= "invoice.pdf";
+		String path= "invoice.pdf";	
 		PdfWriter pw = new PdfWriter(path);
 		PdfDocument pd = new PdfDocument(pw);
 		pd.setDefaultPageSize(PageSize.A5);
