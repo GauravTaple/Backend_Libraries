@@ -1,4 +1,4 @@
-package com.batch.example.config;
+package com.batch.example.processor;
 
 import com.batch.example.model.Product;
 import org.springframework.batch.item.ItemProcessor;
