@@ -6,14 +6,16 @@ public class Product  {
     private String description;
     private String price;
     private String discount;
+    private String discountPrice;
 
 
-    public Product(String productId, String title, String description, String price, String discount) {
+    public Product(String productId, String title, String description, String price, String discount,String discountPrice) {
         this.productId = productId;
         this.title = title;
         this.description = description;
         this.price = price;
         this.discount = discount;
+        this.discountPrice=discountPrice;
     }
 
     public Product() {
@@ -58,4 +60,12 @@ public class Product  {
     public void setDiscount(String discount) {
         this.discount = discount;
     }
+
+	public String getDiscountPrice() {
+		return discountPrice;
+	}
+
+	public void setDiscountPrice(String discountPrice) {
+		this.discountPrice = discountPrice;
+	}
 }

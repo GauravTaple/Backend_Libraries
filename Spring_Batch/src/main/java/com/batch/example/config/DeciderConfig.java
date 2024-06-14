@@ -8,6 +8,7 @@ import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.job.flow.JobExecutionDecider;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
@@ -22,6 +23,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import com.batch.example.decider.MyJobExecutionDecider;
 import com.batch.example.model.Product;
+import com.batch.example.processor.CustomItemProcessor;
 
 @Configuration
 public class DeciderConfig {
@@ -44,9 +46,9 @@ public class DeciderConfig {
         return new JobBuilder("job", jobRepository)
                 .listener(listener)
                 .start(step1())
-                .next(step2())                     // Sequential Flow
+                .next(step2())                    // Sequential Flow
                 .next(decider()).on("CONTINUE").to(step3())      // Conditional Flow
-                .next(decider()).on("STOP").to(step4())
+                .from(decider()).on("STOP").to(step4())
                 .end()
                 
 //                .start(step1()).on("*").to(step2())                 
@@ -61,8 +63,8 @@ public class DeciderConfig {
       return new StepBuilder("step1", jobRepository)
               .<Product,Product>chunk(50, transactionManager)
               .reader(reader())
-//            .processor(processor())
-              .writer(itemWriter())
+              .processor(processor())
+              .writer(writer())
               .build();
   }
   
@@ -90,7 +92,7 @@ public class DeciderConfig {
   
   @Bean
   public Step step4() {
-	  return new StepBuilder("step4",jobRepository)
+	  return new StepBuilder("step4",jobRepository)	
 			  .tasklet((contribution,chunkContext) -> {
 				  System.out.println("Executing step 4...!!!");
 				  return RepeatStatus.FINISHED;
@@ -98,8 +100,6 @@ public class DeciderConfig {
 			  .build();
 }
   
-  
-    	
 // ---------------------------------Reader---------------------------------------------------
     @Bean
     public FlatFileItemReader<Product> reader() {
@@ -131,18 +131,18 @@ public class DeciderConfig {
 //  }
   
 // ---------------------------------Processor---------------------------------------------------
-//    @Bean
-//    public ItemProcessor<Product, Product> itemProcessor() {
-//        return new CustomItemProcessor();
-//    }	
+    @Bean
+    public ItemProcessor<Product, Product> processor() {
+        return new CustomItemProcessor();
+    }	
 
     	
     
 // ---------------------------------Writer---------------------------------------------------
     @Bean
-    public ItemWriter<Product> itemWriter() {
+    public ItemWriter<Product> writer() {
         return new JdbcBatchItemWriterBuilder<Product>()
-                .sql("insert into products(product_id,title,description,price,discount)values(:productId, :title, :description, :price, :discount)")
+                .sql("insert into products(product_id,title,description,price,discount,discountPrice)values(:productId, :title, :description, :price, :discount, :discountPrice)")
                 .dataSource(dataSource)
                 .beanMapped()
                 .build();
