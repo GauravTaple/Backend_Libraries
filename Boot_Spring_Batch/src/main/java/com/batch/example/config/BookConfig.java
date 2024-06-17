@@ -25,7 +25,6 @@ import com.batch.example.batch.BookTitleProcessor;
 import com.batch.example.batch.BookWriter;
 import com.batch.example.entity.BookEntity;
 
-
 @Configuration
 public class BookConfig {
 	
