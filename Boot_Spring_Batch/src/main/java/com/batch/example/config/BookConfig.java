@@ -46,13 +46,11 @@ public class BookConfig {
 				.build();
 	}
 	
-	
 	@Bean
 	@StepScope
 	public ItemWriter<BookEntity> writer(){
 		return new BookWriter();
 	}
-	
 	
 	@Bean
 	@StepScope
