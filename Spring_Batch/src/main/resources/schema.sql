@@ -4,5 +4,6 @@ CREATE  TABLE IF NOT EXISTS products
     title varchar(200),
     description varchar(200),
     price varchar(10),
-    discount varchar(10)
+    discount varchar(10),
+    discountPrice varchar(10)
 );

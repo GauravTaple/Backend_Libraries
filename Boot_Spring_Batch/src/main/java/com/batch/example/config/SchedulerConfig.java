@@ -21,9 +21,9 @@ public class SchedulerConfig {
 	@Autowired
 	private Job job;
 	
-	@Scheduled(fixedDelay =5000,initialDelay = 5000)
+	@Scheduled(fixedDelay =5000,initialDelay = 5000)   // we can write cron expression also.
 	public void scheduleJob() throws Exception {
-		log.info("Job Scheduler Started...!!!");
+		log.info("Job Scheduler Started...!!!");	
 		jobLauncher.run(job, new JobParametersBuilder().addLong("Uniqueness", System.nanoTime()).toJobParameters());
 		log.info("Job Scheduler Finished...!!!");
 		
