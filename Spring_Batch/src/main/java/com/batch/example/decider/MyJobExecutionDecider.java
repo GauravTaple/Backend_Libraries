@@ -9,7 +9,7 @@ public class MyJobExecutionDecider implements JobExecutionDecider {
 
 	@Override
 	public FlowExecutionStatus decide(JobExecution jobExecution, StepExecution stepExecution) {
-		if(stepExecution.getExecutionContext().containsKey("step2 executed")) {
+		if(stepExecution.getExecutionContext().containsKey("step3 executed")) {
 			System.out.println("1st condition");
 			return new FlowExecutionStatus("CONTINUE");
 		}else {

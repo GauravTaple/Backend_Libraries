@@ -19,8 +19,11 @@ import com.openhtmltopdf.svgsupport.BatikSVGDrawer;
 public class ConversionService {
 
 	public void ConvertHtmlToPdf() throws Exception {
-		File htmlFile = new File("src/main/resources/static/BicReminderCL01.html");
-		File outputPdf = new File("HtmlToPdf.pdf");
+		// File htmlFile = new File("src/main/resources/static/CallCard.html");
+		// File outputPdf = new File("Call-card.pdf");
+
+		File htmlFile = new File("src/main/resources/static/FinancingReminder.html");
+		File outputPdf = new File("Financing-Reminder.pdf");
 
 		try (FileOutputStream os = new FileOutputStream(outputPdf)) {
 			PdfRendererBuilder pdfRendererBuilder = new PdfRendererBuilder();
@@ -30,12 +33,12 @@ public class ConversionService {
 			pdfRendererBuilder.toStream(os);
 			pdfRendererBuilder.run();
 			try (PDDocument doc = PDDocument.load(outputPdf)) {
-				flattenPDF(doc);
-				AccessPermission accessPermission = new AccessPermission();
-				StandardProtectionPolicy spp = new StandardProtectionPolicy("123", "123", accessPermission);
-				doc.protect(spp);
-				doc.save("HtmlToPdf.pdf");
-				System.out.println("Pdf done with password protected.");
+//				flattenPDF(doc);
+//				AccessPermission accessPermission = new AccessPermission();
+//				StandardProtectionPolicy spp = new StandardProtectionPolicy("123", "123", accessPermission);
+//				doc.protect(spp);
+				doc.save(outputPdf);
+//				System.out.println("Pdf done with password protected.");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -43,19 +46,19 @@ public class ConversionService {
 		System.out.println("PDF CREATED SUCCESSFULLY FROM HTML ...");
 	}
 
-	private void flattenPDF(PDDocument document) throws IOException {
-		System.out.println(document +"..........document");
-		PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
-		System.out.println(acroForm + ".........acroForm");
-		List<PDField> fields= acroForm.getFields();
-		System.out.println(fields + "........Fields");
-			for (PDField field : fields) {
-				System.out.println(field + "...........field");
-				if(field.getFullyQualifiedName().equals("name")) {
-					field.setValue("Gaurav");
-					field.setReadOnly(true);	
-				}
-			}
-			acroForm.flatten();	
-	}
+//	private void flattenPDF(PDDocument document) throws IOException {
+//		System.out.println(document +"..........document");
+//		PDAcroForm acroForm = document.getDocumentCatalog().getAcroForm();
+//		System.out.println(acroForm + ".........acroForm");
+//		List<PDField> fields= acroForm.getFields();
+//		System.out.println(fields + "........Fields");
+//			for (PDField field : fields) {
+//				System.out.println(field + "...........field");
+//				if(field.getFullyQualifiedName().equals("name")) {
+//					field.setValue("Gaurav");
+//					field.setReadOnly(true);	
+//				}
+//			}
+//			acroForm.flatten();	
+//	}
 }

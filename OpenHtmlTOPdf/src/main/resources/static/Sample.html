@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>reminder-clo1</title>
+
+  <meta charset="utf-8" />
+
+  <style type="text/css">
+    @page {
+      size: A4;
+      font-family: EmbArial;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    @font-face {
+      font-family: EmbArial;
+      src: url('Arial.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: EmbArialBold;
+      src: url('ArialBold.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: EmbArialItalic;
+      src: url('ArialItalic.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: EmbArialItalicBold;
+      src: url('ArialItalicBold.ttf') format('truetype');
+    }
+
+    body {
+      font-family: EmbArial;
+    }
+
+    .justify {
+      text-align: justify;
+    }
+
+    .spaced-text {
+      display: block;
+      padding-left: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="margin-top: 50px;
+      text-align: left;
+      margin-bottom: 20px;">
+    <div style="display: inline-block">
+      <img src="bankIslamLogo.png" alt="logo" height="45px" style="vertical-align: middle; margin-left: 5px" />
+      <p style="
+            margin-left: 10px;
+            font-size: 8px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+          ">
+        Jika tidak sampai, sila kembalikan kepada -<br />
+        <span style="white-space: nowrap">
+          P.O. Box 12176, 50724 Kuala Lumpur, Malaysia
+        </span>
+      </p>
+    </div>
+    <div>
+      <p class="justify" style="
+            font-size: 8px;
+            margin-top: 5px;
+            margin-left: 5px;
+            line-height: 1.2;
+          ">
+        SULIT & PERSENDIRIAN<br />
+        Untuk dibuka oleh Penorima sahaja
+      </p>
+    </div>
+  </header>
+
+
+
+
+  <div style="margin-top: 45px; margin-left: 5px">
+    <p class="justify" style="
+          font-size: 10px;
+          font-family: EmbArialBold;
+          margin-top: 0;
+          margin-bottom: 0;
+        ">
+      CIK FRARAH ALIA BINTI NORDIN<br />
+      NO.6 LORONG 6/7A<br />
+      ABNDAR TASIK PUTRRI 48020<br />
+      RAWANG
+    </p>
+  </div>
+
+  <div style="margin-left: 5px; margin-top: 100px">
+    <p style="font-size: 10px; line-height: 0.5">Tuan/Puan,</p>
+    <p style="font-size: 12px; font-family: EmbArialBold; line-height: 0.5">
+      <u>NOTIS PERINGATAN TUNGGAKAN</u>
+    </p>
+
+    <div style="display: inline-block; font-size: 12px; font-family: EmbArial;line-height: 1.2;">
+      <div style="display: inline-block">
+        <span>Cawangan<br />
+          No. Akaun<br />
+          Jenis Pembiayaan <br />
+          Amaun Pembiayaan <br />
+          Ansuran/Sewaan Bulanan<br />
+          Tarikh<br />
+
+        </span>
+      </div>
+
+      <div style="display: inline-block">
+        <span class="spaced-text">:</span>
+        <span class="spaced-text">:</span>
+        <span class="spaced-text">:</span>
+        <span class="spaced-text">:</span>
+        <span class="spaced-text">:</span>
+        <span class="spaced-text">:</span>
+      </div>
+
+      <div style="display: inline-block">
+        <span>Pusat Pembiayaan Automobil KL</span><br />
+        <span>3201080142915</span><br />
+        <span>MV VEHICLE FIN-i (SOD)</span><span style="font-size: 12px; margin-left: 88px;">"TANPA
+          PRASANGKA"</span><br />
+        <span>RM XX,XXX.00</span><br />
+        <span> RM XX.00</span><br />
+        <span>4/12/2023</span>
+      </div>
+    </div>
+
+    <div>
+      <p class="justify" style="font-size: 12px; line-height: 1.2;">
+        Adalah dimaklumkan bahawa akaun pembiayaan tuan/puan telah tertunggak
+        sebanyak RM XXX.XX.
+      </p>
+      <p class="justify" style="font-size: 12px; line-height: 1.2;">
+        Tuan/Puan dikehendaki untuk melunaskan amaun tertunggak bagi
+        mengekalkan kedudukan reputasi laporan kredit yang baik dan
+        mengelakkan tindakan lanjut daripada pihak Bank.
+      </p>
+      <p class="justify" style="font-size: 12px; line-height: 1.2;">
+        Bayaran boleh dibuat melalui Perbankan Internet Bank Islam
+        (www.bankislam.biz), Perbankan Internet bank-bank ahli MEPS, sistem
+        GIRO Antara Bank (IBG) atau sistem Pemindahan Segera (IBFT) serta
+        melalui Mesin Deposit Tunai di cawangan Bank Islam.
+      </p>
+      <p class="justify" style="font-size: 12px; line-height: 1.2;">
+        Adalah diingatkan bahawa pihak Bank juga berhak mendebit akaun
+        simpanan/semasa tuan/puan di Bank Islam bagi tujuan pembayaran jumlah
+        tunggakan akaun pembiayaan tuan/puan jika berkenaan.
+      </p>
+      <p class="justify" style="font-size: 12px; line-height: 1.2;">
+        Sebarang maklumat dan bantuan berkenaan dengan akaun tuan/puan, sila
+        hubungi nombor yang tertera di bawah:
+      </p>
+
+      <div style="display: inline-block; font-size: 12px; font-family: EmbArial;line-height: 1.2;">
+        <div style="display: inline-block">
+          <span><span>1.</span>03-21803799</span><br />
+          <span><span>2.</span>03-91451599</span><br />
+        </div>
+      </div>
+      <p class="justify" style="font-size: 12px; line-height: 1.2;">Sila abaikan peringatan ini jika bayaran keseluruhan
+        tunggakan telah dibuat. Jika bayaran yang
+        diterima adalah tidak mencukupi, bayaran tersebut diterima atas dasar tanpa prasangka.</p>
+      <p class="justify" style="margin-top: 20px;font-size: 12px;">Sakian. terima kasih.</p>
+      <p class="justify" style="font-size: 12px; margin-top: 20px; line-height: 1.2">
+        Agensi Kaunseling Dan Pengurusan Kredit (AKPK) telah ditubuhkan oleh
+        Bank Negara Malaysia (BNM) bagi menyediakan perkhidmatan pengurusan
+        kewangan, kaunseling kredit, pendidikan kewangan dan penstrukturan
+        semula pembiayaan secara percuma kepada individu. Untuk pertanyaan,
+        sila hubungi ditalian 03-2616 7766.
+      </p>
+      <p class="justify" style="
+                                font-size: 12px;
+                                font-family: EmbArialBold;
+                                text-align: center;
+                                margin-top: 25px;
+                              ">
+        <u>KEWAJIPAN MEMBAYAR HUTANG</u>
+      </p>
+      <p class="justify" style="
+                                font-size: 11px;
+                                font-family: EmbArialItalicBold;
+                                margin-top: 25px;
+                                line-height: 1.2;
+                              ">
+        Hadith yang diriwayatkan oleh Ahmad, Tirmidhi dan Ibnu Majah, sabda
+        Rasulullah s.a.w. yang bermaksud: "Sesungguhnya roh orang mukmin yang
+        berhutang tergantung disebabkan hutangnya sehingga hutang tersebut
+        diselesaikan". (Hadis Hasan)
+      </p>
+      <p class="justify" style="font-size: 9.5px; margin-top: 20px; text-align: center">
+        Nota: Surat ini adalah cetakan komputer. Tandatangan tidak diperlukan.
+      </p>
+    </div>
+
+  </div>
+</body>
+
+</html>

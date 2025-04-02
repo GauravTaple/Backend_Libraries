@@ -26,11 +26,11 @@ public class HtmlToPdfServiceImpl implements HtmlToPdfService {
             PDPageContentStream contentStream = new PDPageContentStream(document, page);
 
             // Load your HTML document
-            File htmlFile = new File("/home/gaurav/IDE/sts-workspace/HtmlToPdf_Pdfbox/src/main/resources/static/BicReminderCL01.html");
+            File htmlFile = new File("/HtmlToPdf_Pdfbox/src/main/resources/static/BicReminderCL01.html");
             Document doc = Jsoup.parse(htmlFile, "UTF-8");
 
             // Load and parse CSS
-            File cssFile = new File("/home/gaurav/IDE/sts-workspace/HtmlToPdf_Pdfbox/src/main/resources/static/BicReminder.css");
+            File cssFile = new File("/HtmlToPdf_Pdfbox/src/main/resources/static/BicReminder.css");
             Map<String, CSSStyleDeclarationImpl> styles = CSSUtils.parseCSS(cssFile);
 
             // Set initial Y position and line height

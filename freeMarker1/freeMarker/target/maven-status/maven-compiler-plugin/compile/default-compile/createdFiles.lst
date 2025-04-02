@@ -1,0 +1,5 @@
+com/freeMarker/FreeMarkerApplication.class
+com/freeMarker/config/Pdf.class
+com/freeMarker/config/PdfService.class
+com/freeMarker/config/TemplateFreeMarkerConfiguration.class
+com/freeMarker/config/Transaction.class
