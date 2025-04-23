@@ -1676,23 +1676,46 @@
           <td style="padding: 5px;" id="table-body-none " class="break">${contextVariables.txnPreviousBalanceTitle!}</td>
           <td style="padding: 5px; text-align: right;padding-right: 10px;" id="table-body-none " class="break">${contextVariables.txnPreviousBalance!}</td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td style="padding: 5px; font-family: EmbArialItalicBold;" id="table-body-none" class="break">${contextVariables.customerNameAndCardNo!}</td>
-          <td></td>
-        </tr>
-        <#list contextVariables.transactions as transaction>
+        <#list contextVariables.retailDetails! as retailDetail>
           <tr id="table-body-none">
             <td style=" padding: 5px;padding-left:10px;" id="table-body-none " class="break">
-              ${transaction.transactionDate!}</td>
+              ${retailDetail.transactionDate!}</td>
             <td style="padding: 5px;" id="table-body-none " class="break">
-              ${transaction.postingDate!}</td>
-            <td style="padding: 5px;" id="table-body-none " class="break">${transaction.description!}</td>
+              ${retailDetail.postingDate!}</td>
+            <td style="padding: 5px;" id="table-body-none " class="break">${retailDetail.description!}</td>
             <td style="padding: 5px; text-align: right;padding-right: 10px;" id="table-body-none " class="break">
-              ${transaction.amount!}${transaction.amountSign!}</td>
+              ${retailDetail.amount!}${retailDetail.amountSign!}</td>
           </tr>
         </#list>
+      
+<#list contextVariables.transactions!?keys as customerKey>
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="padding: 5px; font-family: EmbArialItalicBold;" id="table-body-none" class="break">
+      ${customerKey}
+    </td>
+    <td></td>
+  </tr>
+
+  <#list contextVariables.transactions[customerKey] as transaction>
+    <tr id="table-body-none">
+      <td style="padding: 5px; padding-left:10px;" class="break">
+        ${transaction.transactionDate!}
+      </td>
+      <td style="padding: 5px;" class="break">
+        ${transaction.postingDate!}
+      </td>
+      <td style="padding: 5px;" class="break">
+        ${transaction.description!}
+      </td>
+      <td style="padding: 5px; text-align: right; padding-right: 10px;" class="break">
+        ${transaction.amount!}${transaction.amountSign!}
+      </td>
+    </tr>
+  </#list>
+</#list>
+
         <tr>
           <td style="padding: 5px; border: none;"></td>
           <td style="padding: 5px; border: none;"></td>

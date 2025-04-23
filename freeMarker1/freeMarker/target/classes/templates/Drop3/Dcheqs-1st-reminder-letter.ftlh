@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>DCHEQS Reminders Cashline</title>
+    <title>DCHEQS 1st Reminder Letter</title>
     <meta charset="utf-8" />
     <style type="text/css">
         @page {
             size: A4;
-            font-family: EmbArial;
+            font-family: EmbCenturyGothic;
             margin-left: 50px;
             margin-right: 50px;
             margin-top: 25mm;
@@ -17,8 +17,9 @@
         }
 
         body {
-            font-family: EmbArial;
+            font-family: EmbCenturyGothic;
             font-size: 10pt;
+            text-align: justify;
         }
 
         header {
@@ -45,7 +46,7 @@
         .secondColWidth {
             width: 5%;
             text-align: center;
-            font-family: EmbArialBold;
+            font-family: EmbCenturyGothicBold;
             font-weight: normal;
         }
 
@@ -65,7 +66,7 @@
         }
 
         .fontBold {
-            font-family: EmbArialBold;
+            font-family: EmbCenturyGothicBold;
             font-weight: normal;
         }
 
@@ -80,6 +81,7 @@
         }
     </style>
 </head>
+
 <body style="margin-top: 0px;">
     <header style="font-size: 8pt;margin-top: 50px;">
         <div>
@@ -203,13 +205,11 @@
         <div class="leftPadding">
             <p>Assalamualaikum / Greetings,</p>
             <p>Y.Bhg. Dato’ Sri / Datin Sri / Dato’ / Datuk / Datin / Encik / Tuan/Puan,</p>
-            <div class="fontBold">REMINDER: DISHONOURED CHEQUE DUE TO INSUFFICIENT FUNDS IN THE CUSTOMER’S CURRENT
-                ACCOUNT WITH CASH
-                LINE-i FACILITY </div>
+            <div class="fontBold">REMINDER: INSUFFICIENT FUND TO HONOUR CHEQUE(S) ISSUED</div>
             <div style="border: 1px solid;"></div>
-            <p>The above matter refers.</p>
-            <p>Please be informed that the Bank is unable to clear the following cheque(s) due to insufficient funds in
-                your account:- </p>
+            <p>We refer to the above matter.</p>
+            <p>Please be informed that we are unable to honour the following cheque(s) due to insufficient
+                funds/balances in your account:-</p>
             <table class="second-table">
                 <tr>
                     <td class="firstColWidth fontBold">Cheque No.</td>
@@ -222,11 +222,9 @@
                     <td class="break">6.</td>
                 </tr>
             </table>
-            <p>Please be reminded that you are required to maintain a sufficient balance in the account at all times
+            <p>Please be reminded that you are required to maintain sufficient balance in the account at all times
                 before issuing any cheque payments or perform any fund transfer.</p>
-            <p>Please be reminded that if you continue to issue cheques with insufficient balance in your account, we
-                may convert your current account to “Special Account” where no cheque issuance would be allowed from the
-                said account.</p>
+            <p>Please take note that we may terminate your account should you continue to issue dishonoured cheques.</p>
             <p>Should you need further clarification, please contact the nearest Bank Islam branch. Your co-operation in
                 this matter would be highly appreciated. Thank you.</p>
             <p>Yours faithfully,</p>
@@ -264,13 +262,11 @@
         <div class="leftPadding">
             <p>Assalamualaikum / Salam Sejahtera,</p>
             <p>Y.Bhg. Dato’ Sri / Datin Sri / Dato’ / Datuk / Datin / Encik / Tuan/Puan,</p>
-            <div class="fontBold">PERINGATAN: CEK TAK LAKU DISEBABKAN BAKI TIDAK MENCUKUPI DI DALAM AKAUN SEMASA
-                PELANGGAN DENGAN KEMUDAHAN <span style="font-family: EmbArialItalicBold; font-weight: normal;">CASH
-                    LINE-i</span></div>
+            <div class="fontBold">PERINGATAN: CEK TAK LAKU DISEBABKAN BAKI TIDAK MENCUKUPI</div>
             <div style="border: 1px solid;"></div>
             <p>Merujuk kepada perkara di atas.</p>
             <p>Sila ambil maklum bahawa kami tidak dapat menjelaskan cek yang dikeluarkan seperti yang dinyatakan di
-                bawah disebabkan baki akaun anda tidak mencukupi:- </p>
+                bawah disebabkan baki akaun anda tidak mencukupi:-</p>
             <table class="second-table">
                 <tr>
                     <td class="firstColWidth fontBold">No. Cek</td>
@@ -283,14 +279,12 @@
                     <td class="break">6.</td>
                 </tr>
             </table>
-            <p>Sila ambil peringatan bahawa anda perlu memastikan baki akaun anda adalah mencukupi pada setiap masa
-                sebelum mengeluarkan sebarang cek pembayaran atau melakukan pindahan wang.</p>
-            <p>Sila ambil perhatian bahawa sekiranya anda masih meneruskan pengeluaran cek dengan baki yang tidak
-                mencukupi di dalam akaun anda, pihak Bank boleh mengubah status akaun semasa anda kepada <span
-                    class="fontBold">“Special Account”</span> yang mana tiada pengeluaran cek akan dibenarkan daripada
-                akaun tersebut.</p>
-            <p>Untuk sebarang pertanyaan, sila hubungi cawangan Bank Islam yang terdekat. Kerjasama anda di dalam
-                perkara ini amat kami hargai. Terima kasih.</p>
+            <p>Sila ambil peringatan bahawa anda perlu memastikan baki akaun adalah mencukupi pada setiap masa sebelum
+                mengeluarkan sebarang cek pembayaran atau melakukan pindahan wang.</p>
+            <p>Sila ambil perhatian bahawa kami berhak menutup akaun anda sekiranya anda masih berterusan mengeluarkan
+                Cek Tak Laku.</p>
+            <p>Untuk sebarang pertanyaan, sila hubungi cawangan Bank Islam yang terdekat. Kerjasama anda amat kami
+                hargai. Terima kasih.</p>
             <p>Yang benar,</p>
             <br />
             <div class="fontBold">BANK ISLAM MALAYSIA BERHAD</div>

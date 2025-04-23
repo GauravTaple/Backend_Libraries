@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='s'>
     <title>Saving Account Statement</title>
@@ -15,6 +16,7 @@
       font-family: EmbArial;
       margin-top: 103mm;
       margin-bottom: 10mm;
+
       @top-left {
         content: element(header);
       }
@@ -33,10 +35,37 @@
 
     table {
       -fs-table-paginate: paginate;
+      page-break-inside: avoid;
+      /* Prevent tables from breaking across pages */
     }
 
     tr {
       page-break-inside: avoid;
+      /* Prevent rows from breaking across pages */
+      break-inside: avoid;
+      /* For modern browsers */
+    }
+
+    td,
+    th {
+      page-break-inside: avoid;
+      /* Prevent cells from breaking across pages */
+      break-inside: avoid;
+      /* For modern browsers */
+    }
+
+    .page-break {
+      page-break-before: always;
+      /* Force a page break before this element */
+      break-before: page;
+      /* For modern browsers */
+    }
+
+    .no-break {
+      page-break-inside: avoid;
+      /* Prevent breaking inside this element */
+      break-inside: avoid;
+      /* For modern browsers */
     }
 
     .justify {
@@ -75,12 +104,16 @@
       width: 100%;
       text-align: center;
       margin-left: 0.5px;
+      page-break-inside: avoid;
+      /* Prevent the transaction table from breaking */
     }
 
-    .transaction-table td {
+    .transaction-table td,
+    .transaction-table th {
       border: 1px solid;
       text-align: center;
       padding: 3px;
+      page-break-inside: avoid;
     }
 
     .transaction-table-header {
@@ -96,6 +129,7 @@
       width: 100%;
       border: 1px solid;
       font-size: 11px;
+      page-break-inside: avoid;
     }
 
     .section-title {
@@ -107,6 +141,7 @@
 
     .summary {
       padding-bottom: 10px;
+      page-break-inside: avoid;
     }
 
     .messages {
@@ -114,6 +149,7 @@
       padding: 5px;
       font-family: EmbArialBold;
       font-weight: normal;
+      page-break-inside: avoid;
     }
 
     .summary table,
@@ -121,6 +157,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 2px;
+      page-break-inside: avoid;
     }
 
     .summary td,
@@ -129,10 +166,12 @@
       text-align: center;
       font-family: EmbArialBold;
       font-weight: normal;
+      page-break-inside: avoid;
     }
 
     .summary td:first-child {
       font-weight: bold;
+      page-break-inside: avoid;
     }
 
     .notes {
@@ -217,8 +256,9 @@
           </div>
         </td>
         <td style="text-align: justify; padding-left: 130px;padding-bottom:5px ;">
-          <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='s' && contextVariables.header.gainFlag?lower_case=='y'>
-          <table style="
+          <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='s' &&
+            contextVariables.header.gainFlag?lower_case=='y'>
+            <table style="
                 font-weight: normal;
                 border-spacing: 0;
                 border-collapse: collapse;
@@ -228,48 +268,48 @@
                 font-family: EmbArial;
                 line-height: 1.2;
               ">
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                TARIKH PENYATA <br /><span style="font-family: EmbArialItalicBold;">STATEMENT DATE</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="break"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
-                ${contextVariables.statementDate!}</td>
-            </tr>
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                HALAMAN <br />
-                <span style="font-family: EmbArialItalicBold;">PAGE</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="page-info"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;padding-top: 10px;padding-right: 10px;">
-              </td>
-            </tr>
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;width: 10px;">
-                NOMBOR AKAUN <br />
-                <span style="font-family: EmbArialItalicBold;">ACCOUNT NO</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="break"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom; width: 170px;padding-right: 10px;">
-                ${contextVariables.header.customerAccountNumber!}
-              </td>
-            </tr>
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                CAWANGAN <br /><span style="font-family: EmbArialItalicBold;">BRANCH</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="break"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
-                ${contextVariables.header.branchName!}</td>
-            </tr>
-          </table>
-          <#else>
-          <table style="
+              <tr>
+                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
+                  TARIKH PENYATA <br /><span style="font-family: EmbArialItalicBold;">STATEMENT DATE</span>
+                </th>
+                <td class="padding-td">:</td>
+                <td class="break"
+                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
+                  ${contextVariables.statementDate!}</td>
+              </tr>
+              <tr>
+                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
+                  HALAMAN <br />
+                  <span style="font-family: EmbArialItalicBold;">PAGE</span>
+                </th>
+                <td class="padding-td">:</td>
+                <td class="page-info"
+                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;padding-top: 10px;padding-right: 10px;">
+                </td>
+              </tr>
+              <tr>
+                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;width: 10px;">
+                  NOMBOR AKAUN <br />
+                  <span style="font-family: EmbArialItalicBold;">ACCOUNT NO</span>
+                </th>
+                <td class="padding-td">:</td>
+                <td class="break"
+                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom; width: 170px;padding-right: 10px;">
+                  ${contextVariables.header.customerAccountNumber!}
+                </td>
+              </tr>
+              <tr>
+                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
+                  CAWANGAN <br /><span style="font-family: EmbArialItalicBold;">BRANCH</span>
+                </th>
+                <td class="padding-td">:</td>
+                <td class="break"
+                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
+                  ${contextVariables.header.branchName!}</td>
+              </tr>
+            </table>
+            <#else>
+              <table style="
                 font-weight: normal;
                 border-spacing: 0;
                 border-collapse: collapse;
@@ -279,46 +319,46 @@
                 font-family: EmbArial;
                 line-height: 1.2;
               ">
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                TARIKH PENYATA <br /><span style="font-family: EmbArialItalic;">STATEMENT DATE</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="break"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
-                ${contextVariables.statementDate!}</td>
-            </tr>
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                HALAMAN <br />
-                <span style="font-family: EmbArialItalic;">PAGE</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="page-info"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;padding-top: 10px;padding-right: 10px;">
-              </td>
-            </tr>
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;width: 10px;">
-                NOMBOR AKAUN <br />
-                <span style="font-family: EmbArialItalic;">ACCOUNT NO</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="break"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom; width: 170px;padding-right: 10px;">
-                ${contextVariables.header.customerAccountNumber!}
-              </td>
-            </tr>
-            <tr>
-              <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                CAWANGAN <br /><span style="font-family: EmbArialItalic;">BRANCH</span>
-              </th>
-              <td class="padding-td">:</td>
-              <td class="break"
-                style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
-                ${contextVariables.header.branchName!}</td>
-            </tr>
-          </table>
+                <tr>
+                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
+                    TARIKH PENYATA <br /><span style="font-family: EmbArialItalic;">STATEMENT DATE</span>
+                  </th>
+                  <td class="padding-td">:</td>
+                  <td class="break"
+                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
+                    ${contextVariables.statementDate!}</td>
+                </tr>
+                <tr>
+                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
+                    HALAMAN <br />
+                    <span style="font-family: EmbArialItalic;">PAGE</span>
+                  </th>
+                  <td class="padding-td">:</td>
+                  <td class="page-info"
+                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;padding-top: 10px;padding-right: 10px;">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;width: 10px;">
+                    NOMBOR AKAUN <br />
+                    <span style="font-family: EmbArialItalic;">ACCOUNT NO</span>
+                  </th>
+                  <td class="padding-td">:</td>
+                  <td class="break"
+                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom; width: 170px;padding-right: 10px;">
+                    ${contextVariables.header.customerAccountNumber!}
+                  </td>
+                </tr>
+                <tr>
+                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
+                    CAWANGAN <br /><span style="font-family: EmbArialItalic;">BRANCH</span>
+                  </th>
+                  <td class="padding-td">:</td>
+                  <td class="break"
+                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
+                    ${contextVariables.header.branchName!}</td>
+                </tr>
+              </table>
           </#if>
         </td>
       </tr>
@@ -357,7 +397,7 @@
     <table class="transaction-table">
       <thead style="vertical-align: top;">
         <tr>
-          <th class="transaction-table-header" style="width: 80px; max-width: 80px;">TARIKH<br /><span
+          <th class="transaction-table-header" style="width: 70px; max-width: 70px;">TARIKH<br /><span
               style="font-family: EmbArialItalic;font-weight: normal;">DATE</span></th>
           <th class="transaction-table-header">
             KETERANGAN<br /><span style="font-family: EmbArialItalic;font-weight: normal;">DESCRIPTION</span>
@@ -399,7 +439,11 @@
           <tr>
             <td class="break" style="vertical-align: top;padding: 5px;">${row.trxDate!}</td>
             <td class="break" style="text-align: left;vertical-align: top;padding: 5px;">
-              ${row.description!}
+              <#list row.description?split("|") as sValue>
+                <#if sValue?trim?length gt 0>
+                  ${sValue}<#if sValue?has_next><br /></#if>
+                </#if>
+              </#list>
             </td>
             <td class="break" style="text-align: right;vertical-align: top;padding: 5px;">
               ${row.transactionAmountForDebit!}</td>
@@ -421,14 +465,16 @@
               <td style="width: 167px; text-align: left;font-family: EmbArialBold; font-weight: normal;">TOTAL DEBIT
               </td>
               <td style="width: 70px; text-align: right;">${contextVariables.header.noOfDebit!}</td>
-              <td style="width: 100px; text-align: right;padding-right: 4px;">${contextVariables.header.amountOfDebit!}</td>
+              <td style="width: 100px; text-align: right;padding-right: 4px;">${contextVariables.header.amountOfDebit!}
+              </td>
               <td></td>
             </tr>
             <tr>
               <td style="width: 167px; text-align: left;font-family: EmbArialBold; font-weight: normal;">TOTAL CREDIT
               </td>
               <td style="width: 70px; text-align: right">${contextVariables.header.noOfCredit!}</td>
-              <td style="width: 100px; text-align: right; padding-right: 4px;">${contextVariables.header.amountOfCredit!}</td>
+              <td style="width: 100px; text-align: right; padding-right: 4px;">
+                ${contextVariables.header.amountOfCredit!}</td>
             </tr>
             <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='d'>
               <tr>
@@ -436,7 +482,8 @@
                   TOTAL CHEQUE (FLOAT)
                 </td>
                 <td style="width: 70px; text-align: right"></td>
-                <td style="width: 100px; text-align: right;padding-right: 4px;">${contextVariables.header.totalCheque}</td>
+                <td style="width: 100px; text-align: right;padding-right: 4px;">${contextVariables.header.totalCheque}
+                </td>
               </tr>
             </#if>
             <tr>
@@ -446,34 +493,34 @@
               <td style="width: 70px; text-align: right"></td>
               <td style="width: 100px; text-align: right">
                 <#if contextVariables.header.monthlyAverage?string?contains("-")>
-                    ${contextVariables.header.monthlyAverage}
-                <#else>
+                  ${contextVariables.header.monthlyAverage}
+                  <#else>
                     ${contextVariables.header.monthlyAverage}&#160;
                 </#if>
-            </td>
-            
+              </td>
+
             </tr>
           </table>
         </div>
         <#if contextVariables.header.message?has_content>
-        <div class="section-title">MESEJ / MESSAGES</div>
-        <div class="messages">
-          <table>
-            <tr>
-              <td>
-                <#compress>
-                  <#if contextVariables.header.message??>
-                   <#list contextVariables.header.message?split("|") as sValue>
-                   <#if sValue?trim?length gt 0> 
-                   ${sValue}<#if sValue?has_next><br /></#if>
-                 </#if>                   
-                 </#list>
-                  </#if>
-                </#compress>
-              </td>
-            </tr>
-          </table>
-        </div>
+          <div class="section-title">MESEJ / MESSAGES</div>
+          <div class="messages">
+            <table>
+              <tr>
+                <td>
+                  <#compress>
+                    <#if contextVariables.header.message??>
+                      <#list contextVariables.header.message?split("|") as sValue>
+                        <#if sValue?trim?length gt 0>
+                          ${sValue}<#if sValue?has_next><br /></#if>
+                        </#if>
+                      </#list>
+                    </#if>
+                  </#compress>
+                </td>
+              </tr>
+            </table>
+          </div>
         </#if>
       </div>
       <div class="notes">
@@ -495,4 +542,5 @@
     </div>
   </main>
 </body>
+
 </html>

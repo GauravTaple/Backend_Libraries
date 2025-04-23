@@ -40,7 +40,7 @@ public class Pdf {
 		// Path pdfFileNewBiccStmt3MultiPage = Paths.get("bicc-new-stmt3-multipage.pdf");
 		// Path pdfFileNewBiccStmt4MultiPage = Paths.get("bicc-new-stmt4-multipage.pdf");
 		
-		Path pdfFileBiccEmail = Paths.get("bicc-email.pdf");
+		// Path pdfFileBiccEmail = Paths.get("bicc-email.pdf");
 		
 		// -------- CASA Statement -----------------------------------
 		// Path pdfFile5 = Paths.get("Current-Account-Statement.pdf");
@@ -54,7 +54,7 @@ public class Pdf {
 		// Path cashLineDynamic = Paths.get("Cashline-dynamic.pdf");
 		
 		// -------- Financing Statement -----------------------------
-		// Path pdfFile = Paths.get("Financing-Statement.pdf");
+		Path pdfFile = Paths.get("Financing-Statement.pdf");
 		// Path pdfFileMultiple = Paths.get("FinancingMultipleHeader.pdf");
 		// Path pdfFileEmailFinancingStatement = Paths.get("financing-statement-email.pdf");
 		 
@@ -62,8 +62,16 @@ public class Pdf {
 		// ======================================= Drop 3 ===========================================================================================
 
 		// Path BilobStmtPdf = Paths.get("Drop3Pdfs/BILOB-Statement.pdf");
-		Path DcheqsRemindersCashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-reminders-cashline.pdf");
+		// Path DcheqsReminder1CashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-reminder1-cashline.pdf");
+		// Path DcheqsReminder2CashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-reminder2-cashline.pdf");
+		// Path DcheqsConversionAccountsCashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-conversion-accounts-cashline.pdf");
+		// Path Dcheqs1stReminderLetterPdf = Paths.get("Drop3Pdfs/Dcheqs-1st-reminder-letter.pdf");
+		// Path Dcheqs2ndReminderNormalPdf = Paths.get("Drop3Pdfs/Dcheqs-2nd-reminder-normal.pdf");
+		// Path DcheqsLetterForClosurePdf = Paths.get("Drop3Pdfs/Dcheqs-letter-for-closure-Ac.pdf");
 
+
+
+		Path firststInstallmentHf_TierPDF = Paths.get("CAD-Installment-Letter/1st-installment-hf_tier.pdf");
 
 		try {
 			// ------ RSAM ----------------
@@ -111,7 +119,7 @@ public class Pdf {
 			
 
 			// ----------- Financing Statement ---------------------------
-			// pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
+			pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
 			// pdfService.generatePdfFileFromTemplate("FinancingMultipleHeader.ftlh",pdfFileMultiple);
 			// pdfService.generatePdfFileFromTemplate("financing-statement-email.ftlh", pdfFileEmailFinancingStatement);
 
@@ -119,8 +127,16 @@ public class Pdf {
 		    // ======================================= Drop 3 ===========================================================================================
 
 		    // pdfService.generatePdfFileFromTemplate("Drop3/Bilob-statement.ftlh", BilobStmtPdf);
-			pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-reminders-cashline.ftlh", DcheqsRemindersCashlinePdf);
-			
+			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-reminder1-cashline.ftlh", DcheqsReminder1CashlinePdf);
+			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-reminder2-cashline.ftlh", DcheqsReminder2CashlinePdf);
+			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-conversion-accounts-cashline.ftlh", DcheqsConversionAccountsCashlinePdf);
+			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-1st-reminder-letter.ftlh", Dcheqs1stReminderLetterPdf);
+			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-2nd-reminder-normal.ftlh", Dcheqs2ndReminderNormalPdf);
+			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-letter-for-closure-Ac.ftlh", DcheqsLetterForClosurePdf);
+
+			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment-hf_tier.ftlh", firststInstallmentHf_TierPDF);
+
+
 
 		} catch (Exception exception) {
 			System.out.println(exception.getMessage());

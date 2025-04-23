@@ -6,8 +6,8 @@
   <style type="text/css">
     @page {
       size: A4;
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 35px;
+      margin-right: 35px;
       font-family: EmbArial;
       margin-top: 70mm;
       margin-bottom: 20mm;
@@ -39,9 +39,15 @@
     }
     table {
       -fs-table-paginate: paginate;
+      page-break-inside: auto;
     }
     tr {
       page-break-inside: avoid;
+      break-inside: avoid;
+    }
+     td, th {
+      page-break-inside: avoid; /* Prevent cells from breaking across pages */
+      break-inside: avoid; /* For modern browsers */
     }
     .justify {
       text-align: justify;
@@ -63,32 +69,31 @@
       vertical-align: top;
     }
     .modify-colon {
-      padding-left: 108px;
+      padding-left: 97px;
       padding-right: 5px;
       vertical-align: top;
     }
     .modify-colon-01 {
-      padding-right: 5px;
       vertical-align: top;
     }
     .home-medium-section-space {
       padding-top: 10px;
-      width: 30px;
+      /* width: 5px; */
+
     }
     .home-medium-section-table-first {
       padding: 0;
       font-weight: normal;
       padding-top: 10px;
-      width: 62%;
+      /* width: 53%;   */
     }
     .home-medium-section-table-last {
-      padding: 0;
       padding-top: 10px;
       font-weight: normal;
       vertical-align: top;
       text-align: right;
       width: 85px;
-      max-width: 55px;
+      max-width: 85px;
     }
     .transaction-table {
       border-collapse: collapse;
@@ -124,7 +129,12 @@
     }
     .page-break {
       page-break-before: always;
+      break-before: page;
     }
+   .no-break {
+      page-break-inside: avoid; /* Prevent breaking inside this element */
+      break-inside: avoid; /* For modern browsers */
+      }   
   </style>
 </head>
 <body>
@@ -273,7 +283,6 @@
       <table style="
           font-weight: normal;
           border-collapse: collapse;
-          margin-top: 20px;
           display: inline-block;
           font-size: 11px;
           font-family: EmbArial;
@@ -281,7 +290,7 @@
           margin-top: 50px;
         ">
         <tr>
-          <th style="padding: 0;font-weight: normal; ">
+          <th style="padding: 0;font-weight: normal;">
             Account No <br /> <span style="font-family: EmbArialItalic; font-weight:normal;">No Akaun</span>
           </th>
           <td class="modify-colon">:</td>
@@ -308,8 +317,8 @@
         </tr>
       </table>
     </div>
-    <div style="width: 100%; margin-top: 5px; ">
-      <div style="display: inline-block; width: 49%;  vertical-align: top; padding-right: 9px;">
+    <div style="width: 100%; margin-top: 5px;">
+      <div style="display: inline-block; width: 51%;  vertical-align: top; padding-right: 3px;">
         <table style="
         font-weight: normal;
         border-collapse: collapse;
@@ -324,7 +333,7 @@
                 style="font-family: EmbArialItalic; font-weight:normal;"> Harga Jualan
                 Bank / <br /> Jumlah Sewaan Bank</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space">
               ${contextVariables.header.outstandingBankSalePrice!}</td>
           </tr>
@@ -333,7 +342,7 @@
               Financing Payable Amount <br /> <span style="font-family: EmbArialItalic; font-weight:normal;"> Amaun
                 Pembiayaan Boleh Dibayar</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space">
               ${contextVariables.header.financingPayableAmount!}</td>
           </tr>
@@ -342,19 +351,19 @@
               Advance Payment Amount <br /> <span style="font-family: EmbArialItalic; font-weight:normal;"> Amaun
                 Bayaran Yang Didahulukan </span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space">
               ${contextVariables.header.advancePaymentAmount!}</td>
           </tr>
           <tr>
-            <th class="home-medium-section-table-first" style="width: 215px;">
+            <th class="home-medium-section-table-first" style="width: 56%;" >
               Deferred Payment Holiday Accrued <br /> Profit (if applicable) <br /> <span
                 style="font-family: EmbArialItalic; font-weight:normal;">
-                Amaun Keuntungan Terakru Sepanjang <br /> Tempoh "Payment Holiday" yang <br /> ditangguhkan (jika
+                Amaun Keuntungan Terakru Sepanjang<br /> Tempoh "Payment Holiday" yang <br /> ditangguhkan (jika
                 berkenaan)</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
-            <td class="break home-medium-section-table-last home-medium-section-space">
+            <td class="modify-colon-01 home-medium-section-space" style="width: 3%;">:&#160;RM</td>
+            <td class="break home-medium-section-table-last home-medium-section-space" style="width: 41%;">
               ${contextVariables.header.accruedProfit!}</td>
           </tr>
         </table>
@@ -367,14 +376,15 @@
         font-size: 11px;
         font-family: EmbArial;
         line-height: 1.2;
+        width: 100%;
         ">
           <tr>
             <th class="home-medium-section-table-first" style="line-height: 1.2;">
-              *Outstanding Bank's Sale Price / <br /> Outstanding Bank's Total Rental <br /> <span
+              *Outstanding Bank's Sale Price /<br /> Outstanding Bank's Total Rental <br /> <span
                 style="font-family: EmbArialItalic; font-weight:normal;"> Baki Harga Jualan Bank / <br /> Baki Jumlah
                 Sewaan Bank</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space">
               ${contextVariables.header.bankSalesPrice!}</td>
           </tr>
@@ -383,7 +393,7 @@
               Outstanding Ta'widh Charges <br /> <span style="font-family: EmbArialItalic; font-weight:normal;"> Baki
                 Caj Ta'widh</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space">
               ${contextVariables.header.outstandingTawidhCharges!}</td>
           </tr>
@@ -392,7 +402,7 @@
               Outstanding Misc Cost <br /> <span style="font-family: EmbArialItalic; font-weight:normal;"> Baki Kos
                 Pelbagai</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space">
               ${contextVariables.header.outstandingMiscCost!}</td>
           </tr>
@@ -401,7 +411,7 @@
               Outstanding Other Charges <br /> <span style="font-family: EmbArialItalic; font-weight:normal;"> Baki
                 Caj-caj Lain</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space">
               ${contextVariables.header.outstandingOtherCharges!}</td>
           </tr>
@@ -410,24 +420,24 @@
               Total Outstanding Balance <br /> <span style="font-family: EmbArialItalic; font-weight:normal;">Jumlah
                 Baki Keseluruhan</span>
             </th>
-            <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+            <td class="modify-colon-01 home-medium-section-space" style="width: 5%;">:&#160;RM</td>
             <td class="break home-medium-section-table-last home-medium-section-space"
-              style="width: 107px; max-width: 107px;">${contextVariables.header.balance!}</td>
+              style="width: 43%;">${contextVariables.header.balance!}</td>
           </tr>
           <#if contextVariables.header.bulletFlag?? && contextVariables.header.bulletFlag?lower_case !='n'>
             <tr>
               <th class="home-medium-section-table-first">
                 Amortized / MPP <br />
               </th>
-              <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+              <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
               <td class="break home-medium-section-table-last home-medium-section-space"
-                style="width: 107px; max-width: 107px;">${contextVariables.header.amortized!}</td>
+                >${contextVariables.header.amortized!}</td>
             </tr>
             <tr>
               <th class="home-medium-section-table-first">
                 Residual Value / EBP <br />
               </th>
-              <td class="modify-colon-01 home-medium-section-space">: &#160;RM</td>
+              <td class="modify-colon-01 home-medium-section-space">:&#160;RM</td>
               <td class="break home-medium-section-table-last home-medium-section-space"
                 style="width: 107px; max-width: 107px;">${contextVariables.header.residualValue!}</td>
             </tr>
@@ -443,27 +453,27 @@
     <table class="transaction-table">
       <thead>
         <tr>
-          <th class="transaction-table-header" style="width: 80px; max-width: 80px;border-right: 0.6px solid;">
+          <th class="transaction-table-header" style="width: 70px; max-width: 70px;border-right: 0.6px solid;">
             DATE<br /><span style="font-family: EmbArialItalic;font-weight: normal;">TARIKH</span></th>
-          <th class="transaction-table-header" style="width: 200px; max-width: 200px;border-right: 0.6px solid;">
+          <th class="transaction-table-header" style="border-right: 0.6px solid;">
             TRANSACTION DESCRIPTIONS<br /><span style="font-family: EmbArialItalic;font-weight: normal;font-family: EmbArialItalic; font-weight:normal;">HURAIAN
               TRANSAKSI</span></th>
-          <th class="transaction-table-header" style="width: 100px; max-width: 100px;">
+          <th class="transaction-table-header" style="width: 95px; max-width: 95px;">
             DEBIT<br /><span style="font-family: EmbArialItalic;font-weight: normal;">DEBIT</span><br /><span
               style="font-family: EmbArial;font-weight: normal;">(RM)</span></th>
-          <th class="transaction-table-header" style="width: 100px; max-width: 100px;">
+          <th class="transaction-table-header" style="width: 95px; max-width: 95px;">
             CREDIT<br /><span style="font-family: EmbArialItalic;font-weight: normal;">KREDIT</span><br /><span
               style="font-family: EmbArial;font-weight: normal;">(RM)</span></th>
-          <th class="transaction-table-header" style="width: 100px; max-width: 100px;">
+          <th class="transaction-table-header" style="width: 130px; max-width: 130px;">
             *OUTSTANDING <br /> FINANCING <br /> AMOUNT<br /><span style="font-family: EmbArialItalic;font-weight: normal;">BAKI AMAUN <br />
               PEMBIAYAAN</span><br /><span style="font-family: EmbArial;font-weight: normal;">(RM)</span>
           </th>
-          <th class="transaction-table-header" style="width: 100px; max-width: 100px;">
+          <th class="transaction-table-header" style="width: 132px; max-width: 132px;">
             OUTSTANDING BALANCE<br /><span style="font-family: EmbArialItalic;font-weight: normal;">BAKI <br />
               KESELURUHAN</span><br /><span style="font-family: EmbArial;font-weight: normal;">(RM)</span></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="font-size: 10px;">
         <tr>
           <td class="break"
             style="vertical-align: top;text-align: right;word-spacing: 1px;border: none;border-left: 0.5px solid;padding-bottom: 0px;">
@@ -474,18 +484,18 @@
             ${contextVariables.description!}
           </td>
           <td class="break"
-            style="vertical-align: top;text-align: right;word-spacing: 1px;border: none;padding-bottom: 0px;">
+            style="vertical-align: top;text-align: right;word-spacing: 1px;border: none;padding-right: 2px;padding-bottom: 0px;">
             ${contextVariables.debit!}
           </td>
           <td class="break"
-            style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 8px;border: none;padding-bottom: 0px;">
+            style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 2px;border: none;padding-bottom: 0px;">
             ${contextVariables.credit!}</td>
           <td class="break"
-            style="text-align: right;vertical-align: top; word-spacing: 1px;padding-right: 8px;border: none;padding-bottom: 0px;">
+            style="text-align: right;vertical-align: top; word-spacing: 1px;padding-right: 2px;border: none;padding-bottom: 0px;">
             ${contextVariables.interface.beginningCost!}
           </td>
           <td class="break"
-            style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 8px;border: none;border-right: 0.5px solid;padding-bottom: 0px;">
+            style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 7px;border: none;border-right: 0.5px solid;padding-bottom: 0px;">
             ${contextVariables.interface.beginningBalance!}</td>
         </tr>
         <#list contextVariables.statements as row>
@@ -499,18 +509,18 @@
               ${row.description!}
             </td>
             <td class="break"
-              style="vertical-align: top;text-align: right;word-spacing: 1px;border: none;">
+              style="vertical-align: top;text-align: right;word-spacing: 1px;border: none;padding-right: 2px;">
               ${row.debitAmount!}
             </td>
             <td class="break"
-              style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 8px;border: none;">
+              style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 2px;border: none;">
               ${row.creditAmount!}</td>
             <td class="break"
-              style="text-align: right;vertical-align: top; word-spacing: 1px;padding-right: 8px;border: none;">
+              style="text-align: right;vertical-align: top; word-spacing: 1px;padding-right: 2px;border: none;">
               ${row.beginningCost!}
             </td>
             <td class="break"
-              style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 8px;border: none;border-right: 0.5px solid;">
+              style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 7px;border: none;border-right: 0.5px solid;">
               ${row.balance!}</td>
           </tr>
         </#list>
@@ -543,24 +553,24 @@
               include financing amount which has not been<div style="padding-left: 30px;">disbursed.</div>
             </div>
             <div class="justify" style="letter-spacing: 1px;">
-              ii . <span style="margin-left: 12px;font-family: EmbArialItalic; font-weight:normal;">Baki yang
+              <span style="margin-left: 30px;font-family: EmbArialItalic; font-weight:normal;">Baki yang
                 tertera di dalam penyata akaun pembiayaan ini tidak termasuk amaun pembiayaan yang belum </span>
               <div style="padding-left: 30px;font-family: EmbArialItalic;font-weight: normal;">dikeluarkan.</div>
             </div>
             <div class="justify" style="letter-spacing: 1px;">
-               <span style="margin-left: 30px;">Total Outstanding Balance = Outstanding Bank's Sale Price /
+              ii . <span style="margin-left: 12px;">Total Outstanding Balance = Outstanding Bank's Sale Price /
                 Outstanding Bank's Total Rental + Outstanding </span><br />
               <span style="margin-left: 190px;">Ta'widh Charges + Outstanding Misc Cost + Outstanding Other Charges.</span>
             </div>
             <div class="justify" style="letter-spacing: 1px;">
-              iii . <span class="justify" style="margin-left: 8px;font-family: EmbArialItalic; font-weight:normal;">Jumlah
+              <span class="justify" style="margin-left: 28px;font-family: EmbArialItalic; font-weight:normal;">Jumlah
                 Baki Keseluruhan = Baki Harga Jualan Bank / Baki Jumlah Sewaan Bank + Baki Caj Ta'widh + Baki Kos </span> <br />
               <span class="justify" style="margin-left: 180px;font-family: EmbArialItalic; font-weight:normal;">Pelbagai
                 + Baki Caj-Caj Lain.</span>
               <div class="justify" style="letter-spacing: 1px;line-height: 1.1;">
-                <span style="padding-left: 27px;">* The actual terminologies are subject to prevailing Shariah
+                iii . <span style="padding-left: 7px;">* The actual terminologies are subject to prevailing Shariah
                   contract / concept executed between the Bank and </span><br /><span style="padding-left: 30px;">the customer including but not limited to
-                  ijarah, istisna', murabahah,tawarruq or bai' 'inah.</span> <br />
+                  ijarah, istisna', murabahah, tawarruq or bai' 'inah.</span> <br />
                 <span style="font-family: EmbArialItalic; font-weight:normal;"><span
                     style="padding-left: 30px;">Penggunaan terma yang tepat yang
                     digunapakai tertakluk kepada kontrak / konsep Shariah yang dimeterai di</span> <br /><span
