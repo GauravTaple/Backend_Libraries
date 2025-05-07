@@ -26,6 +26,7 @@
         }
 
         header {
+            font-family: EmbArial;
             text-align: center;
             position: running(header);
             width: 677px;
@@ -34,6 +35,7 @@
         }
 
         footer {
+            font-family: EmbArial;
             font-size: 8pt;
             position: running(footer);
         }
@@ -169,7 +171,7 @@
         <div class="footer">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                    width="14" height="14" viewBox="0 0 256 256" xml:space="preserve" class="footerSvgImages" >
+                    width="23" height="23" viewBox="0 0 256 256" xml:space="preserve" class="footerSvgImages" >
                     <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
                         transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
                         <path
@@ -183,7 +185,7 @@
                     </g>
                 </svg>603-2702 8000</span>
             <span style="margin-left: 30px;">
-                <svg fill="white" width="14" height="14" version="1.1" id="Layer_1"
+                <svg fill="white" width="23" height="23" version="1.1" id="Layer_1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 490.667 490.667" xml:space="preserve" class="footerSvgImages">
                     <g>
@@ -198,10 +200,10 @@
                                 stroke-linecap="round" />
                         </g>
                     </g>
-                </svg> www.bankislam.com</span>
+                </svg>www.bankislam.com</span>
             <span style="margin-left: 30px;">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                    width="14" height="14" viewBox="0 0 256 256" xml:space="preserve" class="footerSvgImages">
+                    width="23" height="23" viewBox="0 0 256 256" xml:space="preserve" class="footerSvgImages">
                     <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
                         transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
                         <circle cx="45" cy="45" r="45"
@@ -225,7 +227,7 @@
             </tr>
             <tr>
                 <td>Tarikh</td>
-                <td>:&gt;DATE&lt;</td>
+                <td>:&gt;&#160;DATE&lt;</td>
                 <td></td>
             </tr>
         </table>
@@ -276,10 +278,10 @@
             <tr>
                 <td>Jadual Bayaran Ansuran<br /> Bulanan</td>
                 <td>
-                    <table style="width: 80%;margin: 15px auto;text-align: center;">
+                    <table style="width: 90%;margin: 15px auto;text-align: center;">
                         <tr>
-                            <td>Bulan</td>
-                            <td>Ansuran Bulanan<br /> (RM)</td>
+                            <td style="width: 50%;">Bulan</td>
+                            <td style="width: 50%;">Ansuran Bulanan<br /> (RM)</td>
                         </tr>
                         <tr>
                             <td class="break">1 - «AMTERM»</td>
@@ -302,6 +304,7 @@
         <div class="paddingTopDiv">Sekian, Wassalam</div>
         <div class="paddingTopDiv fontBold">AMANAH TERJAMIN. NILAI TERHASIL.</div>
         <div class="paddingTopDiv fontBold">BANK ISLAM MALAYSIA BERHAD</div>
+        <div class="page-break"></div>
         <div class="paddingTopDiv fontBold" style="text-align: center;">SURAT INI ADALAH CETAKAN KOMPUTER DAN TIDAK
             MEMERLUKAN <br />TANDATANGAN</div>
     </main>

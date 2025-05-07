@@ -37,7 +37,7 @@ public class Pdf {
 		// Path pdfFileBiccStmt3MultiPage = Paths.get("bicc-stmt3-multipage.pdf");
 		// Path pdfFileBiccStmt4MultiPage = Paths.get("bicc-stmt4-multipage.pdf");
 		// Path pdfFileBiccStmt3OLDMultiPage = Paths.get("bicc-old-multipage.pdf");
-		// Path pdfFileNewBiccStmt3MultiPage = Paths.get("bicc-new-stmt3-multipage.pdf");
+		Path pdfFileNewBiccStmt3MultiPage = Paths.get("bicc-new-stmt3-multipage.pdf");
 		// Path pdfFileNewBiccStmt4MultiPage = Paths.get("bicc-new-stmt4-multipage.pdf");
 		
 		// Path pdfFileBiccEmail = Paths.get("bicc-email.pdf");
@@ -54,7 +54,7 @@ public class Pdf {
 		// Path cashLineDynamic = Paths.get("Cashline-dynamic.pdf");
 		
 		// -------- Financing Statement -----------------------------
-		Path pdfFile = Paths.get("Financing-Statement.pdf");
+		// Path pdfFile = Paths.get("Financing-Statement.pdf");
 		// Path pdfFileMultiple = Paths.get("FinancingMultipleHeader.pdf");
 		// Path pdfFileEmailFinancingStatement = Paths.get("financing-statement-email.pdf");
 		 
@@ -71,7 +71,16 @@ public class Pdf {
 
 
 
-		Path firststInstallmentHf_TierPDF = Paths.get("CAD-Installment-Letter/1st-installment-hf_tier.pdf");
+		// Path firststInstallmentHf_TierPDF = Paths.get("CAD-Installment-Letter/1st-installment-hf_tier.pdf");
+		// Path firststInstallment_PfPDF = Paths.get("CAD-Installment-Letter/1st-installment_pf.pdf");
+		// Path firststInstallment_VfPDF = Paths.get("CAD-Installment-Letter/1st-installment_vf.pdf");
+		// Path Installment_RLHFLEGACYPDF = Paths.get("CAD-Installment-Letter/installment_rl_hf_legacy.pdf");
+		// Path ReleaseLetter_RLHFNORMALPDF = Paths.get("CAD-Installment-Letter/release_letter_rl_hf_normal.pdf");
+		// Path ReleaseLetter_RLPF = Paths.get("CAD-Installment-Letter/release_letter_rl_pf.pdf");
+		Path ReleaseLetter_RLVF = Paths.get("CAD-Installment-Letter/release_letter_rl_vf.pdf");
+
+
+
 
 		try {
 			// ------ RSAM ----------------
@@ -119,7 +128,7 @@ public class Pdf {
 			
 
 			// ----------- Financing Statement ---------------------------
-			pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
+			// pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
 			// pdfService.generatePdfFileFromTemplate("FinancingMultipleHeader.ftlh",pdfFileMultiple);
 			// pdfService.generatePdfFileFromTemplate("financing-statement-email.ftlh", pdfFileEmailFinancingStatement);
 
@@ -134,7 +143,15 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-2nd-reminder-normal.ftlh", Dcheqs2ndReminderNormalPdf);
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-letter-for-closure-Ac.ftlh", DcheqsLetterForClosurePdf);
 
-			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment-hf_tier.ftlh", firststInstallmentHf_TierPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment-hf_tier.ftlh", firststInstallmentHf_TierPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_pf.ftlh", firststInstallment_PfPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_vf.ftlh", firststInstallment_VfPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/installment_rl_hf_legacy.ftlh", Installment_RLHFLEGACYPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_hf_normal.ftlh", ReleaseLetter_RLHFNORMALPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_pf.ftlh", ReleaseLetter_RLPF);
+			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_vf.ftlh", ReleaseLetter_RLVF);
+
+
 
 
 

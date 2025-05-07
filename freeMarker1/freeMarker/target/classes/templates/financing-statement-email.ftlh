@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +12,7 @@
         style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 14px; text-align: justify; margin-bottom: 25px;">
         <p style="margin-bottom: 20px;font-weight: bold;">Dear Valued Customer,</p>
         <p>
-            Please find attached your Financing Account Statement for year YYYY for your reference and further action.
+            Please find attached your Financing Account Statement for year ${statementYear!} for your reference and further action.
         </p>
         <p style="line-height: 1.2">
             For security reasons, the attachment is password protected. To access,
@@ -85,10 +84,10 @@
                 <tr>
                     <td style="width: 20px; vertical-align: text-top;"></td>
                     <td>
-                        a)<strong>QWFASHION SDN BHD</strong> and company number
+                        a) <strong>QWFASHION SDN BHD</strong> and company number
                         registered with the Bank is <strong>1187123-X</strong>, your
                         default password is <strong>QW87123X</strong><br />
-                        b)<strong>LZDAZLY SDN BHD</strong> and company number registered
+                        b) <strong>LZDAZLY SDN BHD</strong> and company number registered
                         with the Bank is <strong>124593845872</strong> (new format), your
                         default password is <strong>LZ845872</strong>.
                     </td>
@@ -113,5 +112,4 @@
         </div>
     </div>
 </body>
-
 </html>

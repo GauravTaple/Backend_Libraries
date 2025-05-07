@@ -1688,33 +1688,33 @@
           </tr>
         </#list>
       
-<#list contextVariables.transactions!?keys as customerKey>
-  <tr>
-    <td></td>
-    <td></td>
-    <td style="padding: 5px; font-family: EmbArialItalicBold;" id="table-body-none" class="break">
-      ${customerKey}
-    </td>
-    <td></td>
-  </tr>
-
-  <#list contextVariables.transactions[customerKey] as transaction>
-    <tr id="table-body-none">
-      <td style="padding: 5px; padding-left:10px;" class="break">
-        ${transaction.transactionDate!}
-      </td>
-      <td style="padding: 5px;" class="break">
-        ${transaction.postingDate!}
-      </td>
-      <td style="padding: 5px;" class="break">
-        ${transaction.description!}
-      </td>
-      <td style="padding: 5px; text-align: right; padding-right: 10px;" class="break">
-        ${transaction.amount!}${transaction.amountSign!}
-      </td>
-    </tr>
-  </#list>
-</#list>
+        <#list contextVariables.transactions!?keys as customerKey>
+          <tr>
+            <td></td>
+            <td></td>
+            <td style="padding: 5px; font-family: EmbArialItalicBold;" id="table-body-none" class="break">
+              ${customerKey}
+            </td>
+            <td></td>
+          </tr>
+        
+          <#list contextVariables.transactions[customerKey] as transaction>
+            <tr id="table-body-none">
+              <td style="padding: 5px; padding-left:10px;" class="break">
+                ${transaction.transactionDate!}
+              </td>
+              <td style="padding: 5px;" class="break">
+                ${transaction.postingDate!}
+              </td>
+              <td style="padding: 5px;" class="break">
+               <span style="white-space: pre-wrap;">${transaction.description!}</span>
+              </td>
+              <td style="padding: 5px; text-align: right; padding-right: 10px;" class="break">
+                ${transaction.amount!}${transaction.amountSign!}
+              </td>
+            </tr>
+          </#list>
+        </#list>
 
         <tr>
           <td style="padding: 5px; border: none;"></td>
