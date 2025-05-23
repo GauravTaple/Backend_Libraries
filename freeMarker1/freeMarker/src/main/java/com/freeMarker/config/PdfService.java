@@ -159,8 +159,7 @@ public class PdfService {
         // row1.put("html", "2024-12-15");
         // ctxVarsMap.put("bankOfficer", rows);
 
-        // ------Wealth
-        // Management--------------------------------------------------------------
+        // ------Wealth Management--------------------------------------------------------------
         // ctxVarsMap.put("name", "DEWAN PERDAGANGAN ISLAM MALAYSIA (DPIM)");
         // ctxVarsMap.put("address", "NO .56<br/> TINGKAT 1<br/> TAMAN SENA INDAH<br/>
         // 01000<br/> PERLIS");
@@ -180,8 +179,7 @@ public class PdfService {
         // ctxVarsMap.put("date1", "31/08/2023");
         // ctxVarsMap.put("date2", "");
 
-        // // -------- Dynamic values for wealth-management
-        // ------------------------------------------------------
+        // // -------- Dynamic values for wealth-management ------------------------------------------------------
         // ctxVarsMap.put("name", "SYED ALI BIN SYED ABDUL KADIR");
         // ctxVarsMap.put("add1", "72 JALAN RUSA");
         // ctxVarsMap.put("add2", "TAMAN BEROLEH");
@@ -273,123 +271,6 @@ public class PdfService {
         // row1.put("transactionNo", "DV017-000009");
         // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
         // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "DV");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "DV017-000009");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000.00");
-        // row1.put("chargeAmountPercentage", "0.0000");
-        // row1.put("chargeAmountRm", "10.00");
-        // row1.put("amountInvestedRedeemed", "990.00");
-        // row1.put("nav", "0.5225");
-        // row1.put("totalUnits", "1900.00");
-        // rows.add(row1);
-        // ctxVarsMap.put("rows", rows);
-
-        // row1.put("transactionType", "NS");
-        // row1.put("productType", "CASH PLAN");
-        // row1.put("transactionNo", "20240034273R");
-        // row1.put("transactionDate", LocalDate.parse("2024-10-15"));
-        // row1.put("amountPaid", "1,000,00");
         // row1.put("chargeAmountPercentage", "0.0000");
         // row1.put("chargeAmountRm", "10.00");
         // row1.put("amountInvestedRedeemed", "990.00");
@@ -505,50 +386,7 @@ public class PdfService {
         // rows.add(row2);
         // ctxVarsMap.put("rows", rows);
 
-        // row2.put("date", "5/11/23");
-        // row2.put("description", "9501 CDM CASH DEP TO CA 7616449 ");
-        // row2.put("debit", "400.00");
-        // row2.put("credit", "600.00");
-        // row2.put("balance", "18,947.86");
-        // rows.add(row2);
-        // ctxVarsMap.put("rows", rows);
-
-        // row2.put("date", "5/11/23");
-        // row2.put("description", "9501 CDM CASH DEP TO CA 7616449 ");
-        // row2.put("debit", "400.00");
-        // row2.put("credit", "600.00");
-        // row2.put("balance", "18,947.86");
-        // rows.add(row2);
-        // ctxVarsMap.put("rows", rows);
-
-        // row2.put("date", "5/11/23");
-        // row2.put("description", "9501 CDM CASH DEP TO CA 7616449 ");
-        // row2.put("debit", "400.00");
-        // row2.put("credit", "600.00");
-        // row2.put("balance", "18,947.86");
-        // rows.add(row2);
-        // ctxVarsMap.put("rows", rows);
-
-        // row2.put("date", "5/11/23");
-        // row2.put("description", "9501 CDM CASH DEP TO CA 7616449 ");
-        // row2.put("debit", "400.00");
-        // row2.put("credit", "600.00");
-        // row2.put("balance", "18,947.86");
-        // rows.add(row2);
-        // ctxVarsMap.put("rows", rows);
-
-        // row2.put("date", "5/11/23");
-        // row2.put("description",
-        // "9501 CDM CASH DEP TO CA 7616449 9501 CDM CASH DEP TO 7616449 9501 CDM CASH
-        // DEP TO 7616449 9501 CDM CASH DEP TO 7616449 9501");
-        // row2.put("debit", "400.00");
-        // row2.put("credit", "600.00");
-        // row2.put("balance", "18,947.86");
-        // rows.add(row2);
-        // ctxVarsMap.put("rows", rows);
-
-        // -------------------- BICC STMT3
-        // ------------------------------------------------------------------------
+        // -------------------- BICC STMT3 -----------------------------------------------------------------------
         ctxVarsMap.put("name", "TUAN Customer 000000002 ");
         ctxVarsMap.put("address",
                 "ENCIK KKS ENCIK| Country | City Name| Country |ENCIK KKS ENCIK| Country | City Name| Country");
@@ -677,48 +515,6 @@ public class PdfService {
         rows.add(row1);
         ctxVarsMap.put("transactions", rows);
 
-        row1.put("transactionDate", "2024-12-15");
-        row1.put("postingDate", "2024-12-14");
-        row1.put("description", "CASHBACK FOR CARD 8548-FEB");
-        row1.put("amount", "-200.00");
-        rows.add(row1);
-        ctxVarsMap.put("transactions", rows);
-
-        row1.put("transactionDate", "2024-12-15");
-        row1.put("postingDate", "2024-12-14");
-        row1.put("description", "CASHBACK FOR CARD 8548-FEB");
-        row1.put("amount", "-200.00");
-        rows.add(row1);
-        ctxVarsMap.put("transactions", rows);
-
-        row1.put("transactionDate", "2024-12-15");
-        row1.put("postingDate", "2024-12-14");
-        row1.put("description", "CASHBACK FOR CARD 8548-FEB");
-        row1.put("amount", "-200.00");
-        rows.add(row1);
-        ctxVarsMap.put("transactions", rows);
-
-        row1.put("transactionDate", "2024-12-15");
-        row1.put("postingDate", "2024-12-14");
-        row1.put("description", "CASHBACK FOR CARD 8548-FEB");
-        row1.put("amount", "-200.00");
-        rows.add(row1);
-        ctxVarsMap.put("transactions", rows);
-
-        row1.put("transactionDate", "2024-12-15");
-        row1.put("postingDate", "2024-12-14");
-        row1.put("description", "CASHBACK FOR CARD 8548-FEB");
-        row1.put("amount", "-200.00");
-        rows.add(row1);
-        ctxVarsMap.put("transactions", rows);
-
-        row1.put("transactionDate", "2024-12-15");
-        row1.put("postingDate", "2024-12-14");
-        row1.put("description", "CASHBACK FOR CARD 8548-FEB");
-        row1.put("amount", "-200.00");
-        rows.add(row1);
-        ctxVarsMap.put("transactions", rows);
-
         // -------------*************--------------**********------------------------
 
         List<Map<String, Object>> transactions1 = new ArrayList<>();
@@ -761,11 +557,7 @@ public class PdfService {
         ctxVarsMap.put("transactions", customerTransactionsMap);
 
 
-
-
-
-        // // --------------- Financing Statement
-        // ----------------------------------------------
+        // // --------------- Financing Statement ----------------------------------------------
         // Map<String, String> headerMap = new HashMap<>();
         // headerMap.put("customerName", "SYED ALI BIN SYED ABDUL KADIR");
         // headerMap.put("add1", "72 JALAN RUSA");
@@ -1178,150 +970,6 @@ public class PdfService {
         // rows.add(row1);
         // ctxVarsMap.put("statements", rows);
 
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
-        // row1.put("trxDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("transactionAmountForDebit", ".00");
-        // row1.put("transactionAmountForCredit", "720.00");
-        // row1.put("beginningCost", "58,801.25");
-        // row1.put("runningBalance", "70,249.86");
-        // rows.add(row1);
-        // ctxVarsMap.put("statements", rows);
-
         // row1.put("trxDate", "12/10/2023");
         // row1.put("description", "FN PAYMENT THRU CDM FN PAYMENT THRU CDM  | | MY MESSAGE | FN PAYMENT THRU CDM | FN PAYMENT THRU CDM");
         // row1.put("transactionAmountForDebit", ".00");
@@ -1331,8 +979,7 @@ public class PdfService {
         // rows.add(row1);
         // ctxVarsMap.put("statements", rows);
 
-        // --------------- Cashline Statement
-        // ----------------------------------------------
+        // --------------- Cashline Statement ----------------------------------------------
         // Map<String, String> headerMap = new HashMap<>();
         // headerMap.put("add1", "72 JALAN RUSA");
         // headerMap.put("add2", "TAMAN BEROLEH");
@@ -1428,43 +1075,15 @@ public class PdfService {
         // row1.put("runningBalance", "58,801.25");
         // rows.add(row1);
         // ctxVarsMap.put("transactions", rows);
+       
 
-        // row1.put("transactionDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("debitAmount", ".00");
-        // row1.put("creditAmount", "720.00");
-        // row1.put("runningBalance", "58,801.25");
-        // rows.add(row1);
-        // ctxVarsMap.put("transactions", rows);
 
-        // row1.put("transactionDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("debitAmount", ".00");
-        // row1.put("creditAmount", "720.00");
-        // row1.put("runningBalance", "58,801.25");
-        // rows.add(row1);
-        // ctxVarsMap.put("transactions", rows);
+// --------******************-----------------------------******************--------------------------********************-------------------------------------------------
 
-        // row1.put("transactionDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("debitAmount", ".00");
-        // row1.put("creditAmount", "720.00");
-        // row1.put("runningBalance", "58,801.25");
-        // rows.add(row1);
-        // ctxVarsMap.put("transactions", rows);
 
-        // row1.put("transactionDate", "2/10/2023");
-        // row1.put("description", "FN PAYMENT THRU CDM");
-        // row1.put("debitAmount", ".00");
-        // row1.put("creditAmount", "720.00");
-        // row1.put("runningBalance", "58,801.25");
-        // rows.add(row1);
-        // ctxVarsMap.put("transactions", rows);
 
-        // ============================ DROP 3
-        // ===================================================
-        // ============================ BILOB STATEMENT
-        // ===================================================
+        // ============================ DROP 3 ===================================================
+        // ============================ BILOB STATEMENT ===================================================
         // Map<String, String> headerMap = new HashMap<>();
         // headerMap.put("customerName", "SYED ALI BIN SYED ABDUL KADIR");
         // headerMap.put("add1", "72 JALAN RUSA");
