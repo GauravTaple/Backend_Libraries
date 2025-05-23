@@ -14,7 +14,7 @@
             @top-left {
                 content: element(header);
             }
-
+            
             @bottom-left {
                 content: element(footer);
             }
@@ -66,17 +66,6 @@
             border-collapse: collapse;
         }
 
-        .butiranTable {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .butiranTable td {
-            padding: 5px 10px;
-            vertical-align: top;
-            border: 1px solid;
-        }
-
         .paddingTopDiv {
             padding-top: 25px;
         }
@@ -85,10 +74,6 @@
             vertical-align: middle;
             margin-right: 5px;
             display: inline-block;
-        }
-
-        .colorTable {
-            color: white;
         }
 
         .infoTable td {
@@ -227,13 +212,11 @@
         <table class="fontBold" style="font-size: 12pt;">
             <tr>
                 <td style="width: 20%;">Rujukan kami</td>
-                <td style="width: 25%;">:&gt;CIF NO&lt;</td>
-                <td class="break"></td>
+                <td class="break">:&gt;CIF NO&lt;</td>
             </tr>
             <tr>
                 <td>Tarikh</td>
-                <td>:&gt;PAIDOFF DATE&lt;</td>
-                <td></td>
+                <td class="break">:&gt;PAIDOFF DATE&lt;</td>
             </tr>
         </table>
         <br />

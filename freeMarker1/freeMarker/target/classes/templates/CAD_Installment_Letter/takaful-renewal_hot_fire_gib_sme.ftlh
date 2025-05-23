@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Release Letter RL VF</title>
+    <title>Takaful Notification On Renewal Hot Fire - GIB SME</title>
     <meta charset="utf-8" />
     <style type="text/css">
         @page {
@@ -14,17 +14,16 @@
             @top-left {
                 content: element(header);
             }
-            
+
             @bottom-left {
                 content: element(footer);
             }
         }
 
         body {
-            font-family: EmbCourierNew;
-            font-size: 11pt;
-            text-align: justify;
-            line-height: 1.2;
+            font-family: EmbArial;
+            font-size: 10pt;
+            text-align: justify;    
         }
 
         header {
@@ -42,12 +41,9 @@
             position: running(footer);
         }
 
-        .leftPadding {
-            padding-left: 6px;
-        }
 
         .fontBold {
-            font-family: EmbCourierNewBold;
+            font-family: EmbArialBold;
             font-weight: normal;
         }
 
@@ -57,17 +53,13 @@
             overflow-wrap: break-word;
         }
 
-        .page-break {
-            page-break-before: always;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
         }
 
         .paddingTopDiv {
-            padding-top: 25px;
+            padding-top: 15px;
         }
 
         .footerSvgImages {
@@ -76,8 +68,34 @@
             display: inline-block;
         }
 
-        .infoTable td {
-            vertical-align: top;
+        .valTable {
+            width: 90%;
+            text-align: center;
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+
+        .valTable th {
+            border: 1px solid;
+            width: 16%;
+            vertical-align: center;
+            font-family: EmbCenturyGothicBold;
+            font-weight: normal;
+            background-color: red;
+            font-size: 11pt;
+        }
+
+        .valTable td {
+            border: 1px solid;
+            width: 16%;
+            /* vertical-align: top; */
+            background-color: rgb(215, 236, 243);
+            padding: 2px;
+            font-size: 11pt;
+        }
+
+        .fontColor {
+            color: white;
         }
     </style>
 </head>
@@ -209,70 +227,65 @@
     </footer>
 
     <main>
-        <table class="fontBold" style="font-size: 12pt;">
+        <table class="fontBold">
             <tr>
                 <td style="width: 20%;">Rujukan kami</td>
-                <td class="break">:&gt;CIF NO&lt;</td>
+                <td class="break">:&gt; CERTIFICATE NO &lt;</td>
             </tr>
             <tr>
                 <td>Tarikh</td>
-                <td class="break">:&gt;PAIDOFF DATE&lt;</td>
+                <td class="break">:&gt; DATE &lt;</td>
             </tr>
         </table>
         <br />
         <div style="width: 60%;height: 120px; max-height: 120px;">
-            <span class="fontBold">CUSTOMER NAME</span><br />
+            <span class="fontBold">CUSTOMER NAME 1</span><br />
+            <span class="fontBold">CUSTOMER NAME 2</span><br />
             <span>ADDRESS CUSTOMER 1</span><br />
             <span>ADDRESS CUSTOMER 2 </span><br />
             <span>ADDRESS CUSTOMER 3 </span><br />
             <span>ADDRESS CUSTOMER 4 </span><br />
             <span>ADDRESS CUSTOMER 5</span>
         </div>
-        <div style="margin-top: 80px;">Tuan/Puan,</div>
-        <table class="infoTable fontBold" style="margin-top: 10px;">
+        <p style="margin-top: 30px;">Assalamu’alaikum / Salam Sejahtera</p>
+        <div>Tuan / Puan </div>
+        <p class="fontBold">RENEWAL OF FIRE TAKAFUL</p>
+
+        <div style="border: 1px solid;margin-top: 17px;"></div>
+        <div class="paddingTopDiv">Please be informed that Bank Islam will debit your financing account or Current
+            Account after 7 days of this letter for renewal of Fire Takaful as per below table:</div>
+
+        <table class="valTable">
             <tr>
-                <td colspan="3">PENGESAHAN TAMAT PEMBIAYAAN KENDERAAN KONTRAK SOD/CRR</td>
+                <th><span class="fontColor">CERTIFICATE <br />NO.</span></th>
+                <th><span class="fontColor">PARTICIPANT NAME</span></th>
+                <th><span class="fontColor">LOCATION OF RISK</span></th>
+                <th><span class="fontColor">EFFECTIVE <br />DATE</span></th>
+                <th><span class="fontColor">EXPIRY <br />DATE</span></th>
+                <th><span class="fontColor">TOTAL OUTSTANDING<br />(RM)</span></th>
             </tr>
             <tr>
-                <td style="width: 25%;">PELANGGAN</td>
-                <td style="width: 5%; text-align: center;">:</td>
-                <td class="break">&gt;CUSTOMER NAME&lt;</td>
-            </tr>
-            <tr>
-                <td>NO. K/PENGENALAN</td>
-                <td style="text-align: center;">:</td>
-                <td class="break">&gt;NO IC CUSTOMER&lt;</td>
-            </tr>
-            <tr>
-                <td>NO. AKAUN</td>
-                <td style="text-align: center;">:</td>
-                <td class="break">&gt;FINANCING ACCOUNT NO&lt;</td>
-            </tr>
-            <tr>
-                <td>NO. KENDERAAN</td>
-                <td style="text-align: center;">:</td>
-                <td class="break">&gt;REGISTRATION NO&lt;</td>
-            </tr>
-            <tr>
-                <td>JUMLAH PEMBIAYAAN</td>
-                <td style="text-align: center;">:</td>
-                <td class="break">&gt;AMOUNT FINANCING&lt;</td>
+                <td class="break">Fxxxxxxx</td>
+                <td class="break">Customer's <br />Name</td>
+                <td class="break">Property <br />Address</td>
+                <td class="break">Effective date xx/xx/xxxx</td>
+                <td class="break">Expiry date xx/xx/xxxx</td>
+                <td class="break">Contribution Amount RM  xxxx.xx</td>
             </tr>
         </table>
-        <div style="border: 1px solid;margin-top: 17px;"></div>
-        <div class="paddingTopDiv">Perkara di atas adalah dirujuk.</div>
-        <div class="paddingTopDiv">Adalah dimaklumkan pembiayaan di atas telah dijelaskan sepenuhnya pada<span
-                class="fontBold">&gt;PAIDOFF DATE&lt;.</span></div>
-        <div class="paddingTopDiv">Oleh yang demikian, pihak kami dengan ini tidak mempunyai apa-apa tuntutan ke atas
-            pembiayaan tersebut.</div>
-        <div class="paddingTopDiv">Pihak kami mengucapkan terima kasih di atas kesudian Tuan/Puan bermuamalah dan
-            kerjasama yang diberikan.</div>
-        <div class="paddingTopDiv">Sekian, wassalam.</div>
-        <div class="paddingTopDiv fontBold">AMANAH TERJAMIN. NILAI TERHASIL.</div>
+
+        <div>Important Note: </div>
+        <div>Please make payment to your financing account to avoid oustanding or to ensure your current account is
+            available for Takaful payment.</div>
+        <div class="paddingTopDiv">Should you require further information or clarification, kindly email to
+            <u>gib.fee.based.sales@bankislam.com.my.</u></div>
+        <div class="paddingTopDiv">Sekian, Wassalam.</div>
+        <div>Thank you.</div>
+        <div class="paddingTopDiv fontBold">AMANAH TERJAMIN. NILAI TERHASIL. Assuring Trust, Delivering Value.</div>
         <div class="paddingTopDiv fontBold">BANK ISLAM MALAYSIA BERHAD</div>
-        <div style="font-size: 10pt;font-family: EmbCenturyGothicBold; font-weight: normal;padding-top: 35px;">SURAT
-            INI ADALAH CETAKAN KOMPUTER DAN TIDAK
-            MEMERLUKAN TANDATANGAN</div>
+        <div
+            style="font-size: 10pt;font-family: EmbCenturyGothicBold; font-weight: normal;padding-top: 80px;text-align: center;">
+            SURAT INI ADALAH CETAKAN KOMPUTER DAN TIDAK MEMERLUKAN<br /> TANDATANGAN</div>
     </main>
 </body>
 </html>

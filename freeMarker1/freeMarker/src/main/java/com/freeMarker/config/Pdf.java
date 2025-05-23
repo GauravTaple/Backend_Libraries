@@ -77,9 +77,9 @@ public class Pdf {
 		// Path Installment_RLHFLEGACYPDF = Paths.get("CAD-Installment-Letter/installment_rl_hf_legacy.pdf");
 		// Path ReleaseLetter_RLHFNORMALPDF = Paths.get("CAD-Installment-Letter/release_letter_rl_hf_normal.pdf");
 		// Path ReleaseLetter_RLPF = Paths.get("CAD-Installment-Letter/release_letter_rl_pf.pdf");
-		Path ReleaseLetter_RLVF = Paths.get("CAD-Installment-Letter/release_letter_rl_vf.pdf");
-
-
+		// Path ReleaseLetter_RLVF = Paths.get("CAD-Installment-Letter/release_letter_rl_vf.pdf");
+		Path takafulRenewalHotFireRetail = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_retail.pdf");
+		Path takafulRenewalHotFireGibSme = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_gib_sme.pdf");
 
 
 		try {
@@ -149,7 +149,10 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/installment_rl_hf_legacy.ftlh", Installment_RLHFLEGACYPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_hf_normal.ftlh", ReleaseLetter_RLHFNORMALPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_pf.ftlh", ReleaseLetter_RLPF);
-			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_vf.ftlh", ReleaseLetter_RLVF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_vf.ftlh", ReleaseLetter_RLVF);
+			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_retail.ftlh", takafulRenewalHotFireRetail);
+			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_gib_sme.ftlh", takafulRenewalHotFireGibSme);
+
 
 
 
