@@ -61,7 +61,7 @@ public class Pdf {
 		// ******************************************************************************************************************************************
 		// ======================================= Drop 3 ===========================================================================================
 
-		// Path BilobStmtPdf = Paths.get("Drop3Pdfs/BILOB-Statement.pdf");
+		Path BilobStmtPdf = Paths.get("Drop3Pdfs/BILOB-Statement.pdf");
 		// Path DcheqsReminder1CashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-reminder1-cashline.pdf");
 		// Path DcheqsReminder2CashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-reminder2-cashline.pdf");
 		// Path DcheqsConversionAccountsCashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-conversion-accounts-cashline.pdf");
@@ -72,7 +72,7 @@ public class Pdf {
 
 
 		// Path firststInstallmentHf_TierPDF = Paths.get("CAD-Installment-Letter/1st-installment-hf_tier.pdf");
-		Path firststInstallment_PfPDF = Paths.get("CAD-Installment-Letter/1st-installment_pf.pdf");
+		// Path firststInstallment_PfPDF = Paths.get("CAD-Installment-Letter/1st-installment_pf.pdf");
 		// Path firststInstallment_VfPDF = Paths.get("CAD-Installment-Letter/1st-installment_vf.pdf");
 		// Path Installment_RLHFLEGACYPDF = Paths.get("CAD-Installment-Letter/installment_rl_hf_legacy.pdf");
 		// Path firstInstallment_HFSINGLEPDF = Paths.get("CAD-Installment-Letter/1st-instalment_hf-single.pdf");
@@ -94,7 +94,7 @@ public class Pdf {
 
 
 
-		Path ThirtyOneDaysReminder = Paths.get("Drop3-Reminders/31-days-reminder.pdf");
+		// Path ThirtyOneDaysReminder = Paths.get("Drop3-Reminders/31-days-reminder.pdf");
 
 
 
@@ -152,7 +152,7 @@ public class Pdf {
 			// ******************************************************************************************************************************************
 		    // ======================================= Drop 3 ===========================================================================================
 
-		    // pdfService.generatePdfFileFromTemplate("Drop3/Bilob-statement.ftlh", BilobStmtPdf);
+		    pdfService.generatePdfFileFromTemplate("Drop3/Bilob-statement.ftlh", BilobStmtPdf);
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-reminder1-cashline.ftlh", DcheqsReminder1CashlinePdf);
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-reminder2-cashline.ftlh", DcheqsReminder2CashlinePdf);
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-conversion-accounts-cashline.ftlh", DcheqsConversionAccountsCashlinePdf);
@@ -161,7 +161,7 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-letter-for-closure-Ac.ftlh", DcheqsLetterForClosurePdf);
 
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment-hf_tier.ftlh", firststInstallmentHf_TierPDF);
-			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_pf.ftlh", firststInstallment_PfPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_pf.ftlh", firststInstallment_PfPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_vf.ftlh", firststInstallment_VfPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/installment_rl_hf_legacy.ftlh", Installment_RLHFLEGACYPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-instalment_hf-single.ftlh", firstInstallment_HFSINGLEPDF);
@@ -183,7 +183,7 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-overdue-balance-after-auction.ftlh", NoticeOverdueBalanceAfterAuction);
 
 
-			pdfService.generatePdfFileFromTemplate("Drop3-Reminders/31-days-reminder.ftlh", ThirtyOneDaysReminder);
+			// pdfService.generatePdfFileFromTemplate("Drop3-Reminders/31-days-reminder.ftlh", ThirtyOneDaysReminder);
 
 
 		} catch (Exception exception) {

@@ -51,7 +51,6 @@
         }
 
         .customerInfo {
-            width: 60%;
             height: 120px;
             max-height: 120px;
             margin-top: 50px;
