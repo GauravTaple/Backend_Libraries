@@ -37,7 +37,7 @@ public class Pdf {
 		// Path pdfFileBiccStmt3MultiPage = Paths.get("bicc-stmt3-multipage.pdf");
 		// Path pdfFileBiccStmt4MultiPage = Paths.get("bicc-stmt4-multipage.pdf");
 		// Path pdfFileBiccStmt3OLDMultiPage = Paths.get("bicc-old-multipage.pdf");
-		Path pdfFileNewBiccStmt3MultiPage = Paths.get("bicc-new-stmt3-multipage.pdf");
+		// Path pdfFileNewBiccStmt3MultiPage = Paths.get("bicc-new-stmt3-multipage.pdf");
 		// Path pdfFileNewBiccStmt4MultiPage = Paths.get("bicc-new-stmt4-multipage.pdf");
 		
 		// Path pdfFileBiccEmail = Paths.get("bicc-email.pdf");
@@ -72,14 +72,31 @@ public class Pdf {
 
 
 		// Path firststInstallmentHf_TierPDF = Paths.get("CAD-Installment-Letter/1st-installment-hf_tier.pdf");
-		// Path firststInstallment_PfPDF = Paths.get("CAD-Installment-Letter/1st-installment_pf.pdf");
+		Path firststInstallment_PfPDF = Paths.get("CAD-Installment-Letter/1st-installment_pf.pdf");
 		// Path firststInstallment_VfPDF = Paths.get("CAD-Installment-Letter/1st-installment_vf.pdf");
 		// Path Installment_RLHFLEGACYPDF = Paths.get("CAD-Installment-Letter/installment_rl_hf_legacy.pdf");
+		// Path firstInstallment_HFSINGLEPDF = Paths.get("CAD-Installment-Letter/1st-instalment_hf-single.pdf");
 		// Path ReleaseLetter_RLHFNORMALPDF = Paths.get("CAD-Installment-Letter/release_letter_rl_hf_normal.pdf");
 		// Path ReleaseLetter_RLPF = Paths.get("CAD-Installment-Letter/release_letter_rl_pf.pdf");
 		// Path ReleaseLetter_RLVF = Paths.get("CAD-Installment-Letter/release_letter_rl_vf.pdf");
-		Path takafulRenewalHotFireRetail = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_retail.pdf");
-		Path takafulRenewalHotFireGibSme = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_gib_sme.pdf");
+		// Path takafulRenewalHotFireRetail = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_retail.pdf");
+		// Path takafulRenewalHotFireGibSme = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_gib_sme.pdf");
+
+		//------------------ AR RAHNU -----------------------------
+		// Path NoticeBeforeDue12Months = Paths.get("AR Rahnu/Notice-before-due-12months.pdf");
+		// Path NoticeBeforeDue6Months = Paths.get("AR Rahnu/Notice-before-due-6months.pdf");
+		// Path NoticeAuctionBalance = Paths.get("AR Rahnu/Notice-auction-balance.pdf");
+		// Path NoticeAuction = Paths.get("AR Rahnu/Notice-auction.pdf");
+		// Path NoticeOverduePayment6_12Months = Paths.get("AR Rahnu/Notice-overdue-payment-6&12months.pdf");
+		// Path NoticeOverduePayment18Months = Paths.get("AR Rahnu/Notice-overdue-payment-18months.pdf");
+		// Path NoticePayoffMaturityPeriod18Months = Paths.get("AR Rahnu/Notice-payoff-maturity-period-18months.pdf");
+		// Path NoticeOverdueBalanceAfterAuction = Paths.get("AR Rahnu/Notice-overdue-balance-after-auction.pdf");
+
+
+
+		Path ThirtyOneDaysReminder = Paths.get("Drop3-Reminders/31-days-reminder.pdf");
+
+
 
 
 		try {
@@ -144,18 +161,29 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-letter-for-closure-Ac.ftlh", DcheqsLetterForClosurePdf);
 
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment-hf_tier.ftlh", firststInstallmentHf_TierPDF);
-			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_pf.ftlh", firststInstallment_PfPDF);
+			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_pf.ftlh", firststInstallment_PfPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-installment_vf.ftlh", firststInstallment_VfPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/installment_rl_hf_legacy.ftlh", Installment_RLHFLEGACYPDF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/1st-instalment_hf-single.ftlh", firstInstallment_HFSINGLEPDF);
+
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_hf_normal.ftlh", ReleaseLetter_RLHFNORMALPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_pf.ftlh", ReleaseLetter_RLPF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_vf.ftlh", ReleaseLetter_RLVF);
-			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_retail.ftlh", takafulRenewalHotFireRetail);
-			pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_gib_sme.ftlh", takafulRenewalHotFireGibSme);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_retail.ftlh", takafulRenewalHotFireRetail);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_gib_sme.ftlh", takafulRenewalHotFireGibSme);
+
+			// ------------------ AR RAHNU -----------------------------
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-before-due-12months.ftlh", NoticeBeforeDue12Months);
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-before-due-6months.ftlh", NoticeBeforeDue6Months);
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-auction-balance.ftlh", NoticeAuctionBalance);
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-auction.ftlh", NoticeAuction);
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-overdue-payment-6&12months.ftlh", NoticeOverduePayment6_12Months);
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-overdue-payment-18months.ftlh", NoticeOverduePayment18Months);
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-payoff-maturity-period-18months.ftlh", NoticePayoffMaturityPeriod18Months);
+			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-overdue-balance-after-auction.ftlh", NoticeOverdueBalanceAfterAuction);
 
 
-
-
+			pdfService.generatePdfFileFromTemplate("Drop3-Reminders/31-days-reminder.ftlh", ThirtyOneDaysReminder);
 
 
 		} catch (Exception exception) {
