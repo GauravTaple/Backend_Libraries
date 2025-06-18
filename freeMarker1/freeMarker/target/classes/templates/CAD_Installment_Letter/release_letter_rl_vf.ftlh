@@ -101,12 +101,21 @@
             font-weight: normal;
             padding-top: 35px;
         }
+
+        .bankIslamLogo{
+            vertical-align: middle; 
+            margin-left: 5px; 
+            width:270px; 
+            height:65px;
+            display: inline-block;
+            margin-bottom: 7px;
+        }
     </style>
 </head>
 <body style="margin-top: 20px;">
     <header>
         <div>
-            <img src="${contextVariables.bankIslamLogo!}" alt="bank_islam_logo" style="vertical-align: middle; margin-left: 5px; width:270px; height:65px;display: inline-block;margin-bottom: 7px;"/>
+            <img src="${contextVariables.bankIslamLogo!}" alt="bank_islam_logo" class="bankIslamLogo"/>
         </div>
         <span>BANK ISLAM MALAYSIA BERHAD • 198301002944 (No.98127-X)</span>
     </header>
@@ -166,21 +175,22 @@
         <table class="fontBold" style="font-size: 12pt;">
             <tr>
                 <td style="width: 20%;">Rujukan kami</td>
-                <td class="break">:&gt;CIF NO&lt;</td>
+                <td class="break">:&#160;${contextVariables.cifNo!}</td>
             </tr>
             <tr>
                 <td>Tarikh</td>
-                <td class="break">:&gt;PAIDOFF DATE&lt;</td>
+                <td class="break">:&#160;${contextVariables.paidOffDate!}</td>
             </tr>
         </table>
         <br />
         <div class="customerInfo">
-            <span class="fontBold">CUSTOMER NAME</span><br />
-            <span>ADDRESS CUSTOMER 1</span><br />
-            <span>ADDRESS CUSTOMER 2 </span><br />
-            <span>ADDRESS CUSTOMER 3 </span><br />
-            <span>ADDRESS CUSTOMER 4 </span><br />
-            <span>ADDRESS CUSTOMER 5</span>
+            <span class="fontBold">${contextVariables.customerName1!}</span><br />
+            <span class="fontBold">${contextVariables.customerName2!}</span><br />
+            <span>${contextVariables.add1!}</span><br />
+            <span>${contextVariables.add2!}</span><br />
+            <span>${contextVariables.add3!}</span><br />
+            <span>${contextVariables.add4!}</span><br />
+            <span>${contextVariables.add5!}</span><br />
         </div>
         <div style="margin-top: 80px;">Tuan/Puan,</div>
         <table class="infoTable fontBold" style="margin-top: 10px;">
@@ -190,33 +200,33 @@
             <tr>
                 <td style="width: 25%;">PELANGGAN</td>
                 <td style="width: 5%;" class="alignCenter">:</td>
-                <td class="break">&gt;CUSTOMER NAME&lt;</td>
+                <td class="break">${contextVariables.customerName1!}</td>
             </tr>
             <tr>
                 <td>NO. K/PENGENALAN</td>
                 <td class="alignCenter">:</td>
-                <td class="break">&gt;NO IC CUSTOMER&lt;</td>
+                <td class="break">${contextVariables.icNo!}</td>
             </tr>
             <tr>
                 <td>NO. AKAUN</td>
                 <td class="alignCenter">:</td>
-                <td class="break">&gt;FINANCING ACCOUNT NO&lt;</td>
+                <td class="break">${contextVariables.accNo!}</td>
             </tr>
             <tr>
                 <td>NO. KENDERAAN</td>
                 <td class="alignCenter">:</td>
-                <td class="break">&gt;REGISTRATION NO&lt;</td>
+                <td class="break">${contextVariables.registrationNumber!}</td>
             </tr>
             <tr>
                 <td>JUMLAH PEMBIAYAAN</td>
                 <td class="alignCenter">:</td>
-                <td class="break">&gt;AMOUNT FINANCING&lt;</td>
+                <td class="break">${contextVariables.amountFinancing!}</td>
             </tr>
         </table>
         <div class="dividerLine"></div>
         <div class="paddingTopDiv">Perkara di atas adalah dirujuk.</div>
-        <div class="paddingTopDiv">Adalah dimaklumkan pembiayaan di atas telah dijelaskan sepenuhnya pada<span
-                class="fontBold">&gt;PAIDOFF DATE&lt;.</span></div>
+        <div class="paddingTopDiv">Adalah dimaklumkan pembiayaan di atas telah dijelaskan sepenuhnya pada <br/><span
+                class="fontBold">${contextVariables.paidOffDate!}.</span></div>
         <div class="paddingTopDiv">Oleh yang demikian, pihak kami dengan ini tidak mempunyai apa-apa tuntutan ke atas
             pembiayaan tersebut.</div>
         <div class="paddingTopDiv">Pihak kami mengucapkan terima kasih di atas kesudian Tuan/Puan bermuamalah dan

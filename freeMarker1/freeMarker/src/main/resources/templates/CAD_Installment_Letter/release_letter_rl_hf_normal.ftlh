@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Release Letter RL HF NORMAL</title>
     <meta charset="utf-8" />
@@ -97,14 +96,25 @@
             font-family: EmbCenturyGothicBold;
             font-weight: normal;
         }
+
+        .bankIslamLogo{
+            vertical-align: middle; 
+            margin-left: 5px; 
+            width:270px; 
+            height:65px;
+            display: inline-block;
+            margin-bottom: 7px;
+        }
+
+        .alignText{
+            text-align: center;
+        }
     </style>
 </head>
-
 <body style="margin-top: 20px;">
     <header>
         <div>
-            <img src="${contextVariables.bankIslamLogo!}" alt="bank_islam_logo"
-                style="vertical-align: middle; margin-left: 5px; width:270px; height:65px;display: inline-block;margin-bottom: 7px;" />
+            <img src="${contextVariables.bankIslamLogo!}" alt="bank_islam_logo" class="bankIslamLogo" />
         </div>
         <span>BANK ISLAM MALAYSIA BERHAD • 198301002944 (No.98127-X)</span>
     </header>
@@ -164,22 +174,22 @@
         <table class="fontBold" style="font-size: 12pt;">
             <tr>
                 <td style="width: 20%;">Rujukan kami</td>
-                <td class="break">:&gt;CIF NO&lt;</td>
+                <td class="break">:&#160;${contextVariables.cifNo!}</td>
             </tr>
             <tr>
                 <td>Tarikh</td>
-                <td class="break">:&gt;PAIDOFF DATE&lt;</td>
+                <td class="break">:&#160;${contextVariables.paidOffDate!}</td>
             </tr>
         </table>
         <br />
         <div class="customerInfo">
-            <span class="fontBold">CUSTOMER NAME 1</span><br />
-            <span class="fontBold">CUSTOMER NAME 2</span><br />
-            <span>ADDRESS CUSTOMER 1 </span><br />
-            <span>ADDRESS CUSTOMER 2 </span><br />
-            <span>ADDRESS CUSTOMER 3 </span><br />
-            <span>ADDRESS CUSTOMER 4 </span><br />
-            <span>ADDRESS CUSTOMER 5</span>
+            <span class="fontBold">${contextVariables.customerName1!}</span><br />
+            <span class="fontBold">${contextVariables.customerName2!}</span><br />
+            <span>${contextVariables.add1!}</span><br />
+            <span>${contextVariables.add2!}</span><br />
+            <span>${contextVariables.add3!}</span><br />
+            <span>${contextVariables.add4!}</span><br />
+            <span>${contextVariables.add5!}</span><br />
         </div>
         <div style="margin-top: 80px;">Tuan/Puan,</div>
         <table class="infoTable fontBold" style="margin-top: 10px;">
@@ -188,18 +198,18 @@
             </tr>
             <tr>
                 <td style="width: 25%;">PELANGGAN</td>
-                <td style="width: 5%; text-align: center;">:</td>
-                <td class="break">&gt;CUSTOMER NAME 1&lt; &amp; >CUSTOMER NAME 2&lt;</td>
+                <td style="width: 5%;" class="alignText">:</td>
+                <td class="break">${contextVariables.customerName1!} &amp; ${contextVariables.customerName2!}</td>
             </tr>
             <tr>
                 <td>NO. AKAUN</td>
-                <td style="text-align: center;">:</td>
-                <td class="break">&gt;FINANCING ACCOUNT NO&lt;</td>
+                <td class="alignText">:</td>
+                <td class="break">${contextVariables.accNo!}</td>
             </tr>
             <tr>
                 <td>JUMLAH PEMBIAYAAN</td>
-                <td style="text-align: center;">:</td>
-                <td class="break">&gt;AMOUNT FINANCING&lt;</td>
+                <td class="alignText">:</td>
+                <td class="break">${contextVariables.amountFinancing!}</td>
             </tr>
         </table>
         <div class="dividerLine"></div>
@@ -223,5 +233,4 @@
             MEMERLUKAN TANDATANGAN</div>
     </main>
 </body>
-
 </html>

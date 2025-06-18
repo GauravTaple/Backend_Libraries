@@ -107,7 +107,8 @@
       line-height: 1.2;
     }
 
-    .messages {
+  .messages table{ 
+      width: 100%;
       text-align: center;
     }
 
@@ -478,6 +479,7 @@
             Malaysia.)</span></span>
       </#if>
     </div>
+   
     <table class="transaction-table">
       <thead style="vertical-align: top;font-size: 12px;">
         <tr>
@@ -499,43 +501,45 @@
       </thead>
       <tbody style="font-family: EmbArial; font-weight: normal;">
         <#if contextVariables.accountDto??>
-          <tr>
-            <td class="break" colspan="4"
-              style="text-align: left; padding-left: 90px; padding-top: 2px; padding-bottom: 2px;">
-              ${contextVariables.accountDto.description?default("No Description Available")} <br />
-              <span style="font-family: EmbArialItalic; font-weight: normal;">Previous Balance</span>
-            </td>
-            <td class="break" style="text-align: right;border-left: hidden;padding-right: 10px;">
-              ${contextVariables.accountDto.runningBalance?default("0.00")}
-            </td>
-          </tr>
-        </#if>
+        <tr>
+          <td class="break" style="vertical-align: top;padding: 5px;">${contextVariables.accountDto.transactionDate!}</td>
+
+          <td class="break"
+            style="text-align: left; padding-left: 90px; padding-top: 2px; padding-bottom: 2px; border-left: hidden;">
+            ${contextVariables.accountDto.description?default("No Description Available")} <br />
+            <span style="font-family: EmbArialItalic; font-weight: normal;">Previous Balance</span>
+          </td>
+          
+          <td class="break" style="text-align: right;vertical-align: top;padding: 5px;border-left: hidden; ">
+            ${contextVariables.accountDto.creditAmount!}</td>
+          <td class="break" style="text-align: right;vertical-align: top;padding: 5px; border-left: hidden;">
+            ${contextVariables.accountDto.debitAmount!}</td>
+
+          <td class="break" style="text-align: right;border-left: hidden;padding-right: 10px;">
+            ${contextVariables.accountDto.runningBalance?default("0.00")}
+          </td>
+        </tr>
+      </#if>
+
         <#list contextVariables.transactions as row>
-          <tr>
-            <td style="border-bottom: hidden;"></td>
-            <td style="border-bottom: hidden;"></td>
-            <td style="border-bottom: hidden;"></td>
-            <td style="border-bottom: hidden;"></td>
-            <td style="border-bottom: hidden;"></td>
-          </tr>
-          <tr>
-            <td class="break" style="vertical-align: top;padding: 0px;border-bottom: hidden;">${row.transactionDate!}
-            </td>
-            <td class="break"
-              style="text-align: left;vertical-align: top;padding: 0px;padding-left: 10px; border-bottom: hidden;">
-              ${row.description!}
-            </td>
-            <td class="break"
-              style="text-align: right;vertical-align: top;padding: 0px;border-bottom: hidden;padding-right: 10px;">
-              ${row.debitAmount!}</td>
-            <td class="break"
-              style="text-align: right;vertical-align: top;padding: 0px;border-bottom: hidden;padding-right: 10px;">
-              ${row.creditAmount!}</td>
-            <td class="break"
-              style="text-align: right;vertical-align: top;padding: 0px;border-bottom: hidden;padding-right: 10px;">
-              ${row.runningBalance!}</td>
-          </tr>
-        </#list>
+        <tr>
+          <td class="break" style="vertical-align: top;padding: 5px;">${row.transactionDate!}</td>
+          <td class="break" style="text-align: left;vertical-align: top;padding: 5px;">
+            <#list row.description?split("|") as sValue>
+              <#if sValue?trim?length gt 0>
+                ${sValue}<#if sValue?has_next><br /></#if>
+              </#if>
+            </#list>
+          </td>
+          <td class="break" style="text-align: right;vertical-align: top;padding: 5px;">
+            ${row.creditAmount!}</td>
+          <td class="break" style="text-align: right;vertical-align: top;padding: 5px;">
+            ${row.debitAmount!}</td>
+          <td class="break" style="text-align: right;vertical-align: top;padding: 5px;">
+            ${row.runningBalance!}</td>
+        </tr>
+      </#list>
+       
         <tr>
           <td style="padding: 0;padding-bottom: 13.5px;">
             <div style="border: none; border-top:1px solid;"></div>
@@ -617,6 +621,8 @@
           <td style="text-align: right; vertical-align: top;padding: 5px;border-left: hidden;line-height: 0.5;"></td>
         </tr>
       </tbody>
+
+
     </table>
     <div style="page-break-inside: avoid;">
       <div class="container" style="page-break-inside: avoid;">
@@ -717,9 +723,25 @@
                 </div>
         </#if>
         <div class="section-title" style="border-top: 1px solid;">MESEJ / MESSAGES</div>
-        <div class="messages">
-          ${contextVariables.totalMessages!}
-        </div>
+        <#if contextVariables.header.totalMessages?has_content>
+         <div class="messages">
+          <table>
+            <tr>
+              <td>
+                <#compress>
+                  <#if contextVariables.header.totalMessages??>
+                    <#list contextVariables.header.totalMessages?split("|") as sValue>
+                      <#if sValue?trim?length gt 0>
+                        ${sValue}<#if sValue?has_next><br /></#if>
+                      </#if>
+                    </#list>
+                  </#if>
+                </#compress>
+              </td>
+            </tr>
+          </table>
+         </div>
+        </#if>
       </div>
       <!-- Notes Section -->
       <div class="notes">

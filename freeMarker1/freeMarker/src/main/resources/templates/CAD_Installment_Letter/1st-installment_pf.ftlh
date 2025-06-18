@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>1st Installment PF</title>
+    <title>Release Letter RL PF</title>
     <meta charset="utf-8" />
     <style type="text/css">
         @page {
             size: A4;
-            font-family: EmbCenturyGothic;
             margin-left: 50px;
             margin-right: 50px;
             margin-top: 30mm;
@@ -22,9 +21,10 @@
         }
 
         body {
-            font-family: EmbCenturyGothic;
-            font-size: 10pt;
+            font-family: EmbCourierNew;
+            font-size: 11pt;
             text-align: justify;
+            line-height: 1.2;
         }
 
         header {
@@ -47,7 +47,7 @@
         }
 
         .fontBold {
-            font-family: EmbCenturyGothicBold;
+            font-family: EmbCourierNewBold;
             font-weight: normal;
         }
 
@@ -66,19 +66,8 @@
             border-collapse: collapse;
         }
 
-        .butiranTable {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .butiranTable td {
-            padding: 5px 10px;
-            vertical-align: top;
-            border: 1px solid;
-        }
-
         .paddingTopDiv {
-            padding-top: 11px;
+            padding-top: 25px;
         }
 
         .footerSvgImages {
@@ -87,14 +76,30 @@
             display: inline-block;
         }
 
-        .colorTable {
-            color: white;
+        .infoTable td {
+            vertical-align: top;
         }
-
+         
         .customerInfo{
             width: 60%;
             height: 120px; 
             max-height: 120px;
+        }
+
+        .alignCenter{
+            text-align: center;
+        }
+        
+        .dividerLine{
+            border: 1px solid;
+            margin-top: 17px;
+        }
+
+        .bottomMsg{
+            font-size: 10pt;
+            font-family: EmbCenturyGothicBold; 
+            font-weight: normal;
+            padding-top: 35px;
         }
 
         .bankIslamLogo{
@@ -105,19 +110,9 @@
             display: inline-block;
             margin-bottom: 7px;
         }
-
-        .tableHeadBackgroundColor{
-            background-color: brown;
-        }
-
-        .subTable{
-            width: 90%;
-            margin: 10px auto;
-            text-align: center;
-        }
     </style>
 </head>
-<body style="margin-top: 0px;">
+<body style="margin-top: 20px;">
     <header>
         <div>
             <img src="${contextVariables.bankIslamLogo!}" alt="bank_islam_logo" class="bankIslamLogo"/>
@@ -177,87 +172,67 @@
     </footer>
 
     <main>
-        <table class="fontBold">
+        <table class="fontBold" style="font-size: 12pt;">
             <tr>
-                <td style="width: 15%;">Rujukan kami</td>
+                <td style="width: 20%;">Rujukan kami</td>
                 <td class="break">:&#160;${contextVariables.cifNo!}</td>
             </tr>
             <tr>
                 <td>Tarikh</td>
-                <td class="break">:&#160;${contextVariables.date!}</td>
+                <td class="break">:&#160;${contextVariables.paidOffDate!}</td>
             </tr>
         </table>
         <br />
-         <div class="customerInfo">
+        <div class="customerInfo">
             <span class="fontBold">${contextVariables.customerName1!}</span><br />
-            <span class="fontBold">${contextVariables.customerName2!}</span><br />
-            <span>${contextVariables.add1!} </span><br />
-            <span>${contextVariables.add2!} </span><br />
-            <span>${contextVariables.add3!} </span><br />
-            <span>${contextVariables.add4!} </span><br />
+            <span>${contextVariables.add1!}</span><br />
+            <span>${contextVariables.add2!}</span><br />
+            <span>${contextVariables.add3!}</span><br />
+            <span>${contextVariables.add4!}</span><br />
+            <span>${contextVariables.add5!}</span><br />
         </div>
-        <p>Assalamu’alaikum / Salam Sejahtera</p>
-        <p>Tuan / Puan</p>
-        <table>
+        <div style="margin-top: 80px;">Tuan/Puan,</div>
+        <table class="infoTable fontBold" style="margin-top: 10px;">
             <tr>
-                <td colspan="3" class="fontBold">PEMBIAYAAN KONTRAK/KONSEP TAWARRUQ</td>
+                <td colspan="3">PENGESAHAN TAMAT PEMBIAYAAN <span
+                        style="background-color: rgb(180, 177, 177);display: inline-block; padding: 1px 1px;">KONTRAK
+                        QARDHUL HASSAN /TAWARRUQ</span></td>
             </tr>
             <tr>
-                <td style="width: 15%;">Jumlah</td>
-                <td style="width: 5%; text-align: center;">:</td>
-                <td>RM ${contextVariables.orgAmt!}</td>
-            </tr>
-        </table>
-        <p>Dengan segala hormatnya dimaklumkan bahawa pihak Bank telah membuat pengeluaran wang pembiayaan tuan/puan.
-            Berikut adalah butir-butir pembiayaan untuk makluman dan rujukan pihak tuan/puan:</p>
-
-        <table class="butiranTable">
-            <tr>
-                <td style="width: 45%;" class="tableHeadBackgroundColor"><span class="fontBold colorTable">Butiran</span></td>
-                <td style="width: 55%;" class="tableHeadBackgroundColor"><span class="fontBold colorTable">Keterangan</span>
-                </td>
+                <td style="width: 25%;">PELANGGAN</td>
+                <td style="width: 5%;" class="alignCenter">:</td>
+                <td class="break">${contextVariables.customerName1!}</td>
             </tr>
             <tr>
-                <td>Tarikh Pengeluaran</td>
-                <td>${contextVariables.dateRelease!}</td>
+                <td>NO. K/PENGENALAN</td>
+                <td class="alignCenter">:</td>
+                <td class="break">${contextVariables.icNo!}</td>
             </tr>
             <tr>
-                <td>No Akaun Pembiayaan</td>
-                <td>${contextVariables.accountNo!}</td>
+                <td>NO. AKAUN</td>
+                <td class="alignCenter">:</td>
+                <td class="break">${contextVariables.accNo!}</td>
             </tr>
             <tr>
-                <td>Tarikh mula Bayaran Balik</td>
-                <td><span class="fontBold">${contextVariables.dueDate!}</span><br />
-                    <span>sebelum / pada <span class="fontBold">${contextVariables.dateStart!}<u>hb</u></span> setiap <br />bulan</span>
-                </td>
-            </tr>
-            <tr>
-                <td>Jadual Bayaran Ansuran<br /> Bulanan</td>
-                <td>
-                    <table class="subTable">
-                        <tr>
-                            <td>Bulan</td>
-                            <td>Ansuran Bulanan (RM)</td>
-                        </tr>
-                        <tr>
-                            <td class="break" style="width: 40%;">1 - ${contextVariables.term!}</td>
-                            <td class="break" style="width: 60%;">${contextVariables.pmtAmt1!}</td>
-                        </tr>
-                    </table>
-                </td>
+                <td>JUMLAH PEMBIAYAAN</td>
+                <td class="alignCenter">:</td>
+                <td class="break">${contextVariables.amountFinancing!}</td>
             </tr>
         </table>
-        <div class="paddingTopDiv">Pihak tuan adalah bertanggungjawab memaklumkan kepada pihak berkaitan [ie:
-            majikan/bank pembayar] berhubung dengan urusan pembayaran balik pembiayaan mengikut cara bayaran yang
-            dipersetujui oleh pihak Bank dan seterusnya memastikan bayaran ansuran diterima oleh pihak Bank untuk
-            mengelakkan sebarang tunggakan dan tindakan undang-undang.</div>
-        <div class="paddingTopDiv">Sila hubungi 03 – 26 900 900 untuk maklumat lanjut</div>
-        <div class="paddingTopDiv">Sekian, Wassalam</div>
+        <div class="dividerLine"></div>
+        <div class="paddingTopDiv">Perkara di atas adalah dirujuk.</div>
+        <div class="paddingTopDiv">Adalah dimaklumkan pembiayaan di atas telah dijelaskan sepenuhnya pada <br/><span
+                class="fontBold">${contextVariables.paidOffDate!}.</span></div>
+        <div class="paddingTopDiv">Oleh yang demikian, pihak kami dengan ini tidak mempunyai apa-apa tuntutan ke atas
+            pembiayaan tersebut.</div>
+        <div class="paddingTopDiv">Pihak kami mengucapkan terima kasih di atas kesudian Tuan/Puan bermuamalah dan
+            kerjasama yang diberikan.</div>
+        <div class="paddingTopDiv">Sekian, wassalam.</div>
         <div class="paddingTopDiv fontBold">AMANAH TERJAMIN. NILAI TERHASIL.</div>
         <div class="paddingTopDiv fontBold">BANK ISLAM MALAYSIA BERHAD</div>
-        <!-- <div class="page-break"></div> -->
-        <div class="paddingTopDiv fontBold" style="text-align: center;">SURAT INI ADALAH CETAKAN KOMPUTER DAN TIDAK
-            MEMERLUKAN <br />TANDATANGAN</div>
+        <div class="bottomMsg">SURAT
+            INI ADALAH CETAKAN KOMPUTER DAN TIDAK
+            MEMERLUKAN TANDATANGAN</div>
     </main>
 </body>
 </html>

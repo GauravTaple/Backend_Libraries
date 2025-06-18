@@ -43,10 +43,10 @@ public class Pdf {
 		// Path pdfFileBiccEmail = Paths.get("bicc-email.pdf");
 		
 		// -------- CASA Statement -----------------------------------
-		// Path pdfFile5 = Paths.get("Current-Account-Statement.pdf");
-		// Path pdfFile = Paths.get("Saving-Account-Statement.pdf");
+		Path pdfFile5 = Paths.get("Current-Account-Statement.pdf");
+		Path pdfFile = Paths.get("Saving-Account-Statement.pdf");
 		// Path casaEmail = Paths.get("Casa-email.pdf");
-		// Path casaStatement = Paths.get("Casa-statement.pdf");
+		Path casaStatement = Paths.get("Casa-statement.pdf");
 		
 		// -------- Cashline Statement ------------------------------
 		// Path pdfFile = Paths.get("Cashline-Statement.pdf");
@@ -61,7 +61,7 @@ public class Pdf {
 		// ******************************************************************************************************************************************
 		// ======================================= Drop 3 ===========================================================================================
 
-		Path BilobStmtPdf = Paths.get("Drop3Pdfs/BILOB-Statement.pdf");
+		// Path BilobStmtPdf = Paths.get("Drop3Pdfs/BILOB-Statement.pdf");
 		// Path DcheqsReminder1CashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-reminder1-cashline.pdf");
 		// Path DcheqsReminder2CashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-reminder2-cashline.pdf");
 		// Path DcheqsConversionAccountsCashlinePdf = Paths.get("Drop3Pdfs/Dcheqs-conversion-accounts-cashline.pdf");
@@ -79,6 +79,7 @@ public class Pdf {
 		// Path ReleaseLetter_RLHFNORMALPDF = Paths.get("CAD-Installment-Letter/release_letter_rl_hf_normal.pdf");
 		// Path ReleaseLetter_RLPF = Paths.get("CAD-Installment-Letter/release_letter_rl_pf.pdf");
 		// Path ReleaseLetter_RLVF = Paths.get("CAD-Installment-Letter/release_letter_rl_vf.pdf");
+		// Path ReleaseLetter_RLHFLEGACY = Paths.get("CAD-Installment-Letter/release_letter_rl_hf_legacy.pdf");
 		// Path takafulRenewalHotFireRetail = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_retail.pdf");
 		// Path takafulRenewalHotFireGibSme = Paths.get("CAD-Installment-Letter/takaful-renewal_hot_fire_gib_sme.pdf");
 
@@ -94,7 +95,10 @@ public class Pdf {
 
 
 
-		// Path ThirtyOneDaysReminder = Paths.get("Drop3-Reminders/31-days-reminder.pdf");
+		// Path ThirtyOneDaysReminder = Paths.get("NONRSAM-Reminders/31-days-reminder.pdf");
+		// Path FifteenDaysReminder = Paths.get("NONRSAM-Reminders/reminder-15DPD.pdf");
+		// Path SevenDaysReminder = Paths.get("NONRSAM-Reminders/reminder-7DPD.pdf");
+
 
 
 
@@ -132,10 +136,10 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("bicc-new-stmt4-multipage.ftlh",pdfFileNewBiccStmt4MultiPage);
 			
 			// ----------- CASA -----------------------------------------
-			// pdfService.generatePdfFileFromTemplate("Current-Account-Statement.ftlh", pdfFile5);
-			// pdfService.generatePdfFileFromTemplate("Saving-Account-Statement.ftlh",pdfFile);
+			pdfService.generatePdfFileFromTemplate("Current-Account-Statement.ftlh", pdfFile5);
+			pdfService.generatePdfFileFromTemplate("Saving-Account-Statement.ftlh",pdfFile);
 			// pdfService.generatePdfFileFromTemplate("Casa-email.ftlh",casaEmail);
-			// pdfService.generatePdfFileFromTemplate("Casa-statement.ftlh",casaStatement);
+			pdfService.generatePdfFileFromTemplate("Casa-statement.ftlh",casaStatement);
 
 
 			// ---------  Cashline --------------------------------------
@@ -152,7 +156,7 @@ public class Pdf {
 			// ******************************************************************************************************************************************
 		    // ======================================= Drop 3 ===========================================================================================
 
-		    pdfService.generatePdfFileFromTemplate("Drop3/Bilob-statement.ftlh", BilobStmtPdf);
+		    // pdfService.generatePdfFileFromTemplate("Drop3/Bilob-statement.ftlh", BilobStmtPdf);
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-reminder1-cashline.ftlh", DcheqsReminder1CashlinePdf);
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-reminder2-cashline.ftlh", DcheqsReminder2CashlinePdf);
 			// pdfService.generatePdfFileFromTemplate("Drop3/Dcheqs-conversion-accounts-cashline.ftlh", DcheqsConversionAccountsCashlinePdf);
@@ -169,6 +173,7 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_hf_normal.ftlh", ReleaseLetter_RLHFNORMALPDF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_pf.ftlh", ReleaseLetter_RLPF);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_vf.ftlh", ReleaseLetter_RLVF);
+			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/release_letter_rl_hf_legacy.ftlh", ReleaseLetter_RLHFLEGACY);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_retail.ftlh", takafulRenewalHotFireRetail);
 			// pdfService.generatePdfFileFromTemplate("CAD_Installment_Letter/takaful-renewal_hot_fire_gib_sme.ftlh", takafulRenewalHotFireGibSme);
 
@@ -183,7 +188,9 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-overdue-balance-after-auction.ftlh", NoticeOverdueBalanceAfterAuction);
 
 
-			// pdfService.generatePdfFileFromTemplate("Drop3-Reminders/31-days-reminder.ftlh", ThirtyOneDaysReminder);
+			// pdfService.generatePdfFileFromTemplate("NONRSAM-Reminders/31-days-reminder.ftlh", ThirtyOneDaysReminder);
+			// pdfService.generatePdfFileFromTemplate("NONRSAM-Reminders/reminder-15DPD.ftlh", FifteenDaysReminder);
+			// pdfService.generatePdfFileFromTemplate("NONRSAM-Reminders/reminder-7DPD.ftlh", SevenDaysReminder);
 
 
 		} catch (Exception exception) {

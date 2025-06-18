@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Release Letter RL HF NORMAL</title>
+    <title>PAID OFF RL HF LEGACY</title>
     <meta charset="utf-8" />
     <style type="text/css">
         @page {
@@ -24,7 +24,7 @@
             font-family: EmbCourierNew;
             font-size: 11pt;
             text-align: justify;
-            line-height: 1.2;
+            line-height: 1.5;
         }
 
         header {
@@ -67,7 +67,7 @@
         }
 
         .paddingTopDiv {
-            padding-top: 18px;
+            padding-top: 20px;
         }
 
         .footerSvgImages {
@@ -86,9 +86,13 @@
             max-height: 120px;
         }
 
+        .alignCenter {
+            text-align: center;
+        }
+
         .dividerLine {
             border: 1px solid;
-            margin-top: 17px;
+            margin: 15px 0px;
         }
 
         .bottomMsg {
@@ -104,10 +108,6 @@
             height:65px;
             display: inline-block;
             margin-bottom: 7px;
-        }
-
-        .alignText{
-            text-align: center;
         }
     </style>
 </head>
@@ -191,40 +191,35 @@
             <span>${contextVariables.add4!}</span><br />
             <span>${contextVariables.add5!}</span><br />
         </div>
-        <div style="margin-top: 80px;">Tuan/Puan,</div>
+        <div style="margin-top: 80px;">Tuan / Puan,</div>
         <table class="infoTable fontBold" style="margin-top: 10px;">
             <tr>
-                <td colspan="3">PER: PENGESAHAN TAMAT PEMBIAYAAN RUMAH/TANAH </td>
+                <td colspan="3">PENGESAHAN TAMAT PEMBIAYAAN RUMAH/TANAH</td>
             </tr>
             <tr>
                 <td style="width: 25%;">PELANGGAN</td>
-                <td style="width: 5%;" class="alignText">:</td>
+                <td style="width: 5%;" class="alignCenter">:</td>
                 <td class="break">${contextVariables.customerName1!} &amp; ${contextVariables.customerName2!}</td>
             </tr>
             <tr>
                 <td>NO. AKAUN</td>
-                <td class="alignText">:</td>
+                <td class="alignCenter">:</td>
                 <td class="break">${contextVariables.accNo!}</td>
             </tr>
             <tr>
                 <td>JUMLAH PEMBIAYAAN</td>
-                <td class="alignText">:</td>
+                <td class="alignCenter">:</td>
                 <td class="break">${contextVariables.amountFinancing!}</td>
             </tr>
         </table>
         <div class="dividerLine"></div>
-        <div>Merujuk kepada perkara di atas, sukacita dimaklumkan bahawa pembiayaan tuan/puan dengan Bank Islam telah
-            tamat sepenuhnya pada (A9) PAYOFF DATE.</div>
-        <div class="paddingTopDiv">Oleh itu, pelepasan gadaian (Borang16N bagi Geran Individu) ATAUPUN pembatalan “Deed
-            of Assignment” (Deed of Receipt &amp; Reassignment bagi Geran Induk) perlu dilakukan.</div>
-        <div class="paddingTopDiv">Proses ini hendaklah dilakukan dengan melantik peguam sendiri ataupun peguam yang
-            dilantik oleh pihak Bank (dengan persetujuan pelanggan) dan segala kos-kos berhubung dengan tindakan ini
-            adalah ditanggung oleh tuan/puan sepenuhnya.</div>
-        <div class="paddingTopDiv fontBold">Pihak Bank akan mengambil tindakan ke atas kelewatan tuan/puan melakukan
-            proses pelepasan gadaian dengan mengenakan caj penyimpanan dokumen sekuriti sebanyak RM80.00/setahun yang
-            bermula setahun selepas daripada tarikh pembiayaan tamat.</div>
-        <div class="paddingTopDiv">Kerjasama dan tindakan awal yang diberikan amatlah dihargai dan sila hubungi Pusat
-            Khidmat Pelanggan di talian 03-26900 900 sekiranya memerlukan keterangan lanjut.</div>
+        <div class="paddingTopDiv">Perkara di atas adalah dirujuk.</div>
+        <div class="paddingTopDiv">Adalah dimaklumkan pembiayaan di atas telah dijelaskan sepenuhnya pada <br/><span
+                class="fontBold">${contextVariables.paidOffDate!}</span>.</div>
+        <div class="paddingTopDiv">Oleh yang demikian, pihak kami dengan ini tidak mempunyai apa-apa tuntutan ke atas
+            pembiayaan tersebut.</div>
+        <div class="paddingTopDiv">Pihak kami mengucapkan terima kasih di atas kesudian Tuan/Puan bermuamalah dan
+            kerjasama yang diberikan.</div>
         <div class="paddingTopDiv">Sekian, Wassalam.</div>
         <div class="paddingTopDiv fontBold">AMANAH TERJAMIN. NILAI TERHASIL.</div>
         <div class="paddingTopDiv fontBold">BANK ISLAM MALAYSIA BERHAD</div>
