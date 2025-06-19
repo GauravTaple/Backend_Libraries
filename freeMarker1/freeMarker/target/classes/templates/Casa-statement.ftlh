@@ -35,36 +35,27 @@
     table {
       -fs-table-paginate: paginate;
       page-break-inside: avoid;
-      /* Prevent tables from breaking across pages */
     }
 
     tr {
       page-break-inside: avoid;
-      /* Prevent rows from breaking across pages */
       break-inside: avoid;
-      /* For modern browsers */
     }
 
     td,
     th {
       page-break-inside: avoid;
-      /* Prevent cells from breaking across pages */
       break-inside: avoid;
-      /* For modern browsers */
     }
 
     .page-break {
       page-break-before: always;
-      /* Force a page break before this element */
       break-before: page;
-      /* For modern browsers */
     }
 
     .no-break {
       page-break-inside: avoid;
-      /* Prevent breaking inside this element */
       break-inside: avoid;
-      /* For modern browsers */
     }
 
     .justify {
@@ -104,7 +95,6 @@
       text-align: center;
       margin-left: 0.5px;
       page-break-inside: avoid;
-      /* Prevent the transaction table from breaking */
     }
 
     .transaction-table td,
@@ -209,7 +199,6 @@
     }
   </style>
 </head>
-
 <body>
   <header style="text-align: left;margin-bottom: -30px;margin-top: 30px;">
     <div class="logo-left">
@@ -256,9 +245,7 @@
             </#if>
           </div>
         </td>
-        <td style="text-align: justify; padding-left: 40px;padding-bottom:5px ;">
-          <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='s' &&
-            contextVariables.header.gainFlag?lower_case=='y'>
+        <td style="text-align: justify; padding-left: 40px;padding-bottom:5px;">
             <table style="
                 font-weight: normal;
                 border-spacing: 0;
@@ -309,58 +296,6 @@
                   ${contextVariables.header.branchName!}</td>
               </tr>
             </table>
-            <#else>
-              <table style="
-                font-weight: normal;
-                border-spacing: 0;
-                border-collapse: collapse;
-                margin-top: 20px;
-                display: inline-block;
-                font-size: 11px;
-                font-family: EmbArial;
-                line-height: 1.2;
-              ">
-                <tr>
-                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                    TARIKH PENYATA <br /><span style="font-family: EmbArialItalic;">STATEMENT DATE</span>
-                  </th>
-                  <td class="padding-td">:</td>
-                  <td class="break"
-                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
-                    ${contextVariables.statementDate!}</td>
-                </tr>
-                <tr>
-                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                    HALAMAN <br />
-                    <span style="font-family: EmbArialItalic;">PAGE</span>
-                  </th>
-                  <td class="padding-td">:</td>
-                  <td class="page-info"
-                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;padding-top: 10px;padding-right: 10px;">
-                  </td>
-                </tr>
-                <tr>
-                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;width: 10px;">
-                    NOMBOR AKAUN <br />
-                    <span style="font-family: EmbArialItalic;">ACCOUNT NUMBER</span>
-                  </th>
-                  <td class="padding-td">:</td>
-                  <td class="break"
-                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom; width: 170px;padding-right: 10px;">
-                    ${contextVariables.header.customerAccountNumber!}
-                  </td>
-                </tr>
-                <tr>
-                  <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                    CAWANGAN <br /><span style="font-family: EmbArialItalic;">BRANCH</span>
-                  </th>
-                  <td class="padding-td">:</td>
-                  <td class="break"
-                    style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
-                    ${contextVariables.header.branchName!}</td>
-                </tr>
-              </table>
-          </#if>
         </td>
       </tr>
     </table>
@@ -406,26 +341,17 @@
           <th class="transaction-table-header" style="width: 100px; max-width: 100px;">DEBIT<br /><span
               style="font-family: EmbArialItalic;font-weight: normal;">DEBIT</span><br /><span
               style="font-family: EmbArial;font-weight: normal;">
-              <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='s'>(RM)
-              </#if>
-              <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case!='s'>(MYR)
-              </#if>
+              (${contextVariables.header.currencyType!})
             </span></th>
           <th class="transaction-table-header" style="width: 100px; max-width: 100px;">KREDIT<br /><span
               style="font-family: EmbArialItalic;font-weight: normal;">CREDIT</span><br /><span
               style="font-family: EmbArial;font-weight: normal;">
-              <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='s'>(RM)
-              </#if>
-              <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case!='s'>(MYR)
-              </#if>
+              (${contextVariables.header.currencyType!})
             </span></th>
           <th class="transaction-table-header" style="width: 100px; max-width: 100px;">BAKI<br /><span
               style="font-family: EmbArialItalic;font-weight: normal;">BALANCE</span><br /><span
               style="font-family: EmbArial;font-weight: normal;">
-              <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case=='s'>(RM)
-              </#if>
-              <#if contextVariables.header.accountType?? && contextVariables.header.accountType?lower_case!='s'>(MYR)
-              </#if>
+              (${contextVariables.header.currencyType!})
             </span></th>
         </tr>
       </thead>

@@ -102,7 +102,6 @@
     }
 
     .transaction-table-header {
-      /* background-color: #e0e0e0; */
       border: 1px solid;
       padding-bottom: 15px;
       padding-top: 3px;
@@ -328,13 +327,13 @@
           </th>
           <th class="transaction-table-header" style="width: 100px; max-width: 100px;">DEBIT<br /><span
               style="font-family: EmbArialItalic;font-weight: normal;">DEBIT</span><br /><span
-              style="font-family: EmbArial;font-weight: normal;">(MYR)</span></th>
+              style="font-family: EmbArial;font-weight: normal;">(${contextVariables.header.currencyType!})</span></th>
           <th class="transaction-table-header" style="width: 100px; max-width: 100px;">KREDIT<br /><span
               style="font-family: EmbArialItalic;font-weight: normal;">CREDIT</span><br /><span
-              style="font-family: EmbArial;font-weight: normal;">(MYR)</span></th>
+              style="font-family: EmbArial;font-weight: normal;">(${contextVariables.header.currencyType!})</span></th>
           <th class="transaction-table-header" style="width: 100px; max-width: 100px;">BAKI<br /><span
               style="font-family: EmbArialItalic;font-weight: normal;">BALANCE</span><br /><span
-              style="font-family: EmbArial;font-weight: normal;">(MYR)</span></th>
+              style="font-family: EmbArial;font-weight: normal;">(${contextVariables.header.currencyType!})</span></th>
         </tr>
       </thead>
       <tbody>
