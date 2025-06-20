@@ -44,20 +44,6 @@
       break-inside: avoid;
     }
 
-    .page-break {
-      page-break-before: always;
-      break-before: page;
-    }
-
-    .no-break {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-
-    .justify {
-      text-align: justify;
-    }
-
     .logo-left {
       float: left;
     }

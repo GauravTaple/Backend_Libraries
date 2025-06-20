@@ -951,7 +951,7 @@ public class PdfService {
         headerMap.put("amountOfCredit", ".00");
         // headerMap.put("accountType", "s");
         headerMap.put("totalCheque", ".00");
-        headerMap.put("gainFlag", "N");
+        headerMap.put("gainFlag", "Y");
 
         ctxVarsMap.put("header", headerMap);
 
@@ -975,6 +975,96 @@ public class PdfService {
 
         List<Map<String, Object>> rows = new ArrayList<>();
         Map<String, Object> row1 = new HashMap<>();
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
+        row1.put("trxDate", "2/10/2023");
+        row1.put("description", "FN PAYMENT THRU CDM");
+        row1.put("transactionAmountForDebit", ".00");
+        row1.put("transactionAmountForCredit", "720.00");
+        row1.put("beginningCost", "58,801.25");
+        row1.put("runningBalance", "70,249.86");
+        rows.add(row1);
+        ctxVarsMap.put("statements", rows);
+
         row1.put("trxDate", "2/10/2023");
         row1.put("description", "FN PAYMENT THRU CDM");
         row1.put("transactionAmountForDebit", ".00");
