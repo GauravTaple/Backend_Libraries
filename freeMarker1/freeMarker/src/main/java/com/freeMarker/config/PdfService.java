@@ -940,7 +940,7 @@ public class PdfService {
         headerMap.put("bulletFlag", "");
         headerMap.put("amortized", "5555");
         headerMap.put("residualValue", "5555");
-        headerMap.put("currencyType", "USD");
+        headerMap.put("currencyType", "NXX");
         headerMap.put("message", "Pay off your outstanding credit card bills faster and |easier with Personal Financing-i. Quick cash of up to |RM150,000 at a low rate of 5.1% per annum.|Bank Islam will revise its service charges for Consumer |Deposit &amp; Payment Services with effect from 1 April 2009.|Bank Islam Al-Awfar Savings Ac count-i and |Investment Account-i. Deposit RM100 and you | may get RM100,000! |To find out more,please visit our branch or|contact our Call Centre at 03- 26 900 900.");
 
         headerMap.put("monthlyAverage", "10.00-");

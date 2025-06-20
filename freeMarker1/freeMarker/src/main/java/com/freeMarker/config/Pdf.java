@@ -46,7 +46,7 @@ public class Pdf {
 		Path pdfFile5 = Paths.get("Current-Account-Statement.pdf");
 		Path pdfFile = Paths.get("Saving-Account-Statement.pdf");
 		// Path casaEmail = Paths.get("Casa-email.pdf");
-		// Path casaStatement = Paths.get("Casa-statement.pdf");
+		Path casaStatement = Paths.get("Casa-statement.pdf");
 		
 		// -------- Cashline Statement ------------------------------
 		// Path pdfFile = Paths.get("Cashline-Statement.pdf");
@@ -139,7 +139,7 @@ public class Pdf {
 			pdfService.generatePdfFileFromTemplate("Current-Account-Statement.ftlh", pdfFile5);
 			pdfService.generatePdfFileFromTemplate("Saving-Account-Statement.ftlh",pdfFile);
 			// pdfService.generatePdfFileFromTemplate("Casa-email.ftlh",casaEmail);
-			// pdfService.generatePdfFileFromTemplate("Casa-statement.ftlh",casaStatement);
+			pdfService.generatePdfFileFromTemplate("Casa-statement.ftlh",casaStatement);
 
 
 			// ---------  Cashline --------------------------------------

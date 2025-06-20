@@ -399,7 +399,7 @@
               </tr>
             <tr>
               <td style="width: 167px; text-align: left;font-family: EmbArialBold; font-weight: normal;">
-                MONTHLY AVERAGE &#160;( MYR &#160;&#160;)
+                MONTHLY AVERAGE &#160;( ${contextVariables.header.currencyType!} &#160;&#160;)
               </td>
               <td style="width: 70px; text-align: right"></td>
               <td style="width: 100px; text-align: right">
