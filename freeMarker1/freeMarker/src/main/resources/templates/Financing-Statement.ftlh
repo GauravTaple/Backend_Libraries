@@ -474,30 +474,6 @@
         </tr>
       </thead>
       <tbody style="font-size: 10px;">
-        <tr>
-          <td class="break"
-            style="vertical-align: top;text-align: right;word-spacing: 1px;border: none;border-left: 0.5px solid;padding-bottom: 0px;">
-            ${contextVariables.trxDate!}&#160;
-          </td>
-          <td class="break"
-            style="vertical-align: top;text-align: left;word-spacing: 1px;border: none;padding-bottom: 0px;padding-left: 10px;">
-            ${contextVariables.description!}
-          </td>
-          <td class="break"
-            style="vertical-align: top;text-align: right;word-spacing: 1px;border: none;padding-right: 2px;padding-bottom: 0px;">
-            ${contextVariables.debit!}
-          </td>
-          <td class="break"
-            style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 2px;border: none;padding-bottom: 0px;">
-            ${contextVariables.credit!}</td>
-          <td class="break"
-            style="text-align: right;vertical-align: top; word-spacing: 1px;padding-right: 2px;border: none;padding-bottom: 0px;">
-            ${contextVariables.interface.beginningCost!}
-          </td>
-          <td class="break"
-            style="text-align: right;vertical-align: top;word-spacing: 1px;padding-right: 7px;border: none;border-right: 0.5px solid;padding-bottom: 0px;">
-            ${contextVariables.interface.beginningBalance!}</td>
-        </tr>
         <#list contextVariables.statements as row>
           <tr>
             <td class="break"

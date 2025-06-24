@@ -43,10 +43,13 @@ public class Pdf {
 		// Path pdfFileBiccEmail = Paths.get("bicc-email.pdf");
 		
 		// -------- CASA Statement -----------------------------------
-		Path pdfFile5 = Paths.get("Current-Account-Statement.pdf");
-		Path pdfFile = Paths.get("Saving-Account-Statement.pdf");
+		// Path pdfFile5 = Paths.get("Current-Account-Statement.pdf");
+		// Path pdfFile = Paths.get("Saving-Account-Statement.pdf");
 		// Path casaEmail = Paths.get("Casa-email.pdf");
-		Path casaStatement = Paths.get("Casa-statement.pdf");
+		// Path casaStatement = Paths.get("Casa-statement.pdf");
+		// Path CAHeader = Paths.get("CA-Header.pdf");
+		// Path CAMain = Paths.get("CA-Main.pdf");
+
 		
 		// -------- Cashline Statement ------------------------------
 		// Path pdfFile = Paths.get("Cashline-Statement.pdf");
@@ -54,9 +57,16 @@ public class Pdf {
 		// Path cashLineDynamic = Paths.get("Cashline-dynamic.pdf");
 		
 		// -------- Financing Statement -----------------------------
-		// Path pdfFile = Paths.get("Financing-Statement.pdf");
+		Path pdfFile = Paths.get("Financing-Statement.pdf");
 		// Path pdfFileMultiple = Paths.get("FinancingMultipleHeader.pdf");
 		// Path pdfFileEmailFinancingStatement = Paths.get("financing-statement-email.pdf");
+		Path pdfFSHeader = Paths.get("FS-Header.pdf");
+		Path pdfFSHeader2 = Paths.get("FS-Header2.pdf");
+		Path pdfFSTransaction = Paths.get("FS-Transaction.pdf");
+		Path pdfFSMain = Paths.get("FS-Main.pdf");
+
+
+
 		 
 		// ******************************************************************************************************************************************
 		// ======================================= Drop 3 ===========================================================================================
@@ -136,10 +146,13 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("bicc-new-stmt4-multipage.ftlh",pdfFileNewBiccStmt4MultiPage);
 			
 			// ----------- CASA -----------------------------------------
-			pdfService.generatePdfFileFromTemplate("Current-Account-Statement.ftlh", pdfFile5);
-			pdfService.generatePdfFileFromTemplate("Saving-Account-Statement.ftlh",pdfFile);
+			// pdfService.generatePdfFileFromTemplate("Current-Account-Statement.ftlh", pdfFile5);
+			// pdfService.generatePdfFileFromTemplate("Saving-Account-Statement.ftlh",pdfFile);
 			// pdfService.generatePdfFileFromTemplate("Casa-email.ftlh",casaEmail);
-			pdfService.generatePdfFileFromTemplate("Casa-statement.ftlh",casaStatement);
+			// pdfService.generatePdfFileFromTemplate("Casa-statement.ftlh",casaStatement);
+			// pdfService.generatePdfFileFromTemplate("CA-Header.ftlh", CAHeader);
+			// pdfService.generatePdfFileFromTemplate("CA-Main.ftlh", CAMain);
+
 
 
 			// ---------  Cashline --------------------------------------
@@ -149,9 +162,14 @@ public class Pdf {
 			
 
 			// ----------- Financing Statement ---------------------------
-			// pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
+			pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
 			// pdfService.generatePdfFileFromTemplate("FinancingMultipleHeader.ftlh",pdfFileMultiple);
 			// pdfService.generatePdfFileFromTemplate("financing-statement-email.ftlh", pdfFileEmailFinancingStatement);
+			pdfService.generatePdfFileFromTemplate("FS-Header.ftlh", pdfFSHeader);
+			pdfService.generatePdfFileFromTemplate("FS-Main.ftlh", pdfFSMain);
+			pdfService.generatePdfFileFromTemplate("FS-Transaction.ftlh", pdfFSTransaction);
+			pdfService.generatePdfFileFromTemplate("FS-Header2.ftlh", pdfFSHeader2);
+
 
 			// ******************************************************************************************************************************************
 		    // ======================================= Drop 3 ===========================================================================================
