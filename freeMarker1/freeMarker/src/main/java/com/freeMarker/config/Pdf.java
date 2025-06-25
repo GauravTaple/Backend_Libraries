@@ -57,13 +57,13 @@ public class Pdf {
 		// Path cashLineDynamic = Paths.get("Cashline-dynamic.pdf");
 		
 		// -------- Financing Statement -----------------------------
-		Path pdfFile = Paths.get("Financing-Statement.pdf");
+		// Path pdfFile = Paths.get("Financing-Statement.pdf");
 		// Path pdfFileMultiple = Paths.get("FinancingMultipleHeader.pdf");
 		// Path pdfFileEmailFinancingStatement = Paths.get("financing-statement-email.pdf");
-		Path pdfFSHeader = Paths.get("FS-Header.pdf");
-		Path pdfFSHeader2 = Paths.get("FS-Header2.pdf");
-		Path pdfFSTransaction = Paths.get("FS-Transaction.pdf");
-		Path pdfFSMain = Paths.get("FS-Main.pdf");
+		// Path pdfFSHeader = Paths.get("FS-Header.pdf");
+		// Path pdfFSHeader2 = Paths.get("FS-Header2.pdf");
+		// Path pdfFSMain = Paths.get("FS-Main.pdf");
+		// Path pdfFSTransaction = Paths.get("FS-Transaction.pdf");
 
 
 
@@ -103,14 +103,15 @@ public class Pdf {
 		// Path NoticePayoffMaturityPeriod18Months = Paths.get("AR Rahnu/Notice-payoff-maturity-period-18months.pdf");
 		// Path NoticeOverdueBalanceAfterAuction = Paths.get("AR Rahnu/Notice-overdue-balance-after-auction.pdf");
 
-
-
+		
+		// --------- NON-RSAM Reminders ------------
 		// Path ThirtyOneDaysReminder = Paths.get("NONRSAM-Reminders/31-days-reminder.pdf");
 		// Path FifteenDaysReminder = Paths.get("NONRSAM-Reminders/reminder-15DPD.pdf");
 		// Path SevenDaysReminder = Paths.get("NONRSAM-Reminders/reminder-7DPD.pdf");
 
 
-
+		// --------- CBG -------------
+		Path CBGOPRNotice = Paths.get("CBG/CBG-OPR-Notice.pdf");
 
 
 		try {
@@ -162,13 +163,13 @@ public class Pdf {
 			
 
 			// ----------- Financing Statement ---------------------------
-			pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
+			// pdfService.generatePdfFileFromTemplate("Financing-Statement.ftlh", pdfFile);
 			// pdfService.generatePdfFileFromTemplate("FinancingMultipleHeader.ftlh",pdfFileMultiple);
 			// pdfService.generatePdfFileFromTemplate("financing-statement-email.ftlh", pdfFileEmailFinancingStatement);
-			pdfService.generatePdfFileFromTemplate("FS-Header.ftlh", pdfFSHeader);
-			pdfService.generatePdfFileFromTemplate("FS-Main.ftlh", pdfFSMain);
-			pdfService.generatePdfFileFromTemplate("FS-Transaction.ftlh", pdfFSTransaction);
-			pdfService.generatePdfFileFromTemplate("FS-Header2.ftlh", pdfFSHeader2);
+			// pdfService.generatePdfFileFromTemplate("FS-Header.ftlh", pdfFSHeader);
+			// pdfService.generatePdfFileFromTemplate("FS-Main.ftlh", pdfFSMain);
+			// pdfService.generatePdfFileFromTemplate("FS-Transaction.ftlh", pdfFSTransaction);
+			// pdfService.generatePdfFileFromTemplate("FS-Header2.ftlh", pdfFSHeader2);
 
 
 			// ******************************************************************************************************************************************
@@ -206,9 +207,14 @@ public class Pdf {
 			// pdfService.generatePdfFileFromTemplate("AR Rahnu/Notice-overdue-balance-after-auction.ftlh", NoticeOverdueBalanceAfterAuction);
 
 
+			// ----- NON-RSAM Reminders ---------------
 			// pdfService.generatePdfFileFromTemplate("NONRSAM-Reminders/31-days-reminder.ftlh", ThirtyOneDaysReminder);
 			// pdfService.generatePdfFileFromTemplate("NONRSAM-Reminders/reminder-15DPD.ftlh", FifteenDaysReminder);
 			// pdfService.generatePdfFileFromTemplate("NONRSAM-Reminders/reminder-7DPD.ftlh", SevenDaysReminder);
+
+
+			// -------- CBG -------------
+			pdfService.generatePdfFileFromTemplate("CBG/CBG_OPR_Notice.ftlh", CBGOPRNotice);
 
 
 		} catch (Exception exception) {
