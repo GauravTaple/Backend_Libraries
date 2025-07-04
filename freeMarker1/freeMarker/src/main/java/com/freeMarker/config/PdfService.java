@@ -1038,11 +1038,15 @@ public class PdfService {
         headerMap.put("monthlyAverage", "5555");
         headerMap.put("iaProductFlag", "N");
         headerMap.put("currencyType", "NXX");
+        headerMap.put("currentMonthTemporaryExcessFee", "2222");
+
         ctxVarsMap.put("header", headerMap);
 
-        ctxVarsMap.put("customerNameWithoutTitle", "SYED ALI BIN SYED ABDUL KADIR");
+        ctxVarsMap.put("customerNameWithoutTitle", "SYED ALI BIN SYED ABDUL KADIRSSSSSSSSSSSSS");
         ctxVarsMap.put("year", "2000");
         ctxVarsMap.put("trxDate", "5/01/2025");
+        ctxVarsMap.put("statementDate", "20/02/2025");
+        ctxVarsMap.put("maturityDate", "15/10/2025");
         ctxVarsMap.put("description", "Previous Balance");
         ctxVarsMap.put("debit", ".00");
         ctxVarsMap.put("credit", ".00");
