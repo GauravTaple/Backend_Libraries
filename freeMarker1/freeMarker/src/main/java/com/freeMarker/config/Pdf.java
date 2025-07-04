@@ -52,7 +52,7 @@ public class Pdf {
 
 		
 		// -------- Cashline Statement ------------------------------
-		// Path pdfFile = Paths.get("Cashline-Statement.pdf");
+		Path pdfFile = Paths.get("Cashline-Statement.pdf");
 		// Path cashLineEmail = Paths.get("Cashline-statement-email.pdf");
 		// Path cashLineDynamic = Paths.get("Cashline-dynamic.pdf");
 		
@@ -111,7 +111,7 @@ public class Pdf {
 
 
 		// --------- CBG -------------
-		Path CBGOPRNotice = Paths.get("CBG/CBG-OPR-Notice.pdf");
+		// Path CBGOPRNotice = Paths.get("CBG/CBG-OPR-Notice.pdf");
 
 
 		try {
@@ -157,7 +157,7 @@ public class Pdf {
 
 
 			// ---------  Cashline --------------------------------------
-			// pdfService.generatePdfFileFromTemplate("Cashline-statement.ftlh", pdfFile);
+			pdfService.generatePdfFileFromTemplate("Cashline-statement.ftlh", pdfFile);
 			// pdfService.generatePdfFileFromTemplate("Cashline-statement-email.ftlh", cashLineEmail);
 			// pdfService.generatePdfFileFromTemplate("Cashline-dynamic.ftlh", cashLineDynamic);
 			
@@ -214,7 +214,7 @@ public class Pdf {
 
 
 			// -------- CBG -------------
-			pdfService.generatePdfFileFromTemplate("CBG/CBG_OPR_Notice.ftlh", CBGOPRNotice);
+			// pdfService.generatePdfFileFromTemplate("CBG/CBG_OPR_Notice.ftlh", CBGOPRNotice);
 
 
 		} catch (Exception exception) {

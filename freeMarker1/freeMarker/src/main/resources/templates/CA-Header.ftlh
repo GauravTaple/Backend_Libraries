@@ -95,63 +95,15 @@
       font-family: EmbArialBold;
     }
 
-    .container {
-      width: 100%;
-      border: 1px solid;
-      font-size: 11px;
-      page-break-inside: avoid;
+    #common-td-header-width{
+      width: 100px; 
+      max-width: 100px;
     }
 
-    .section-title {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      font-size: 11px;
-      font-family: EmbArialBold;
-      font-weight: normal;
-      padding: 2px;
-    }
-
-    .summary {
-      padding-bottom: 3px;
-      page-break-inside: avoid;
-    }
-
-    .messages {
-      text-align: center;
-      padding: 2px;
-      font-family: EmbArialBold;
-      font-weight: normal;
-      page-break-inside: avoid;
-    }
-
-    .summary table,
-    .messages table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2px;
-      page-break-inside: avoid;
-    }
-
-    .summary td,
-    .messages td {
-      padding-left: 25px;
-      text-align: center;
-      font-family: EmbArialBold;
-      font-weight: normal;
-      page-break-inside: avoid;
-    }
-
-    .summary td:first-child {
-      font-weight: bold;
-      page-break-inside: avoid;
-    }
-
-    .notes {
-      font-size: 11px;
-      margin-top: 2px;
-      line-height: 1;
-      text-align: justify;
+    #common-td-body-width{
+      text-align: right;
+      vertical-align: top;
+      padding: 5px;
     }
 
     .page-info::after {
@@ -164,20 +116,63 @@
       overflow-wrap: break-word;
     }
 
-    .overlap-underline {
-      display: inline-block;
-      position: relative;
+    .font-italic {
+      font-family: EmbArialItalic;
+      font-weight: normal;
     }
 
-    .overlap-underline::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
+    .font-normal{
+      font-family: EmbArial;
+    }
+
+    .font-bold{
+      font-family: EmbArialBold;
+      font-weight: normal;
+    }
+
+    .font-italic-bold{
+      font-family: EmbArialItalicBold;
+      font-weight: normal;
+    }
+
+    .common-div{
+      margin-top: 10px;
+      padding-left: 8px;
+
+    }
+
+    .info-table{
+      font-weight: normal;
+      border-spacing: 0;
+      border-collapse: collapse;
+      margin-top: 20px;
+      display: inline-block;
+      font-size: 11px;
+      font-family: EmbArial;
+      line-height: 1.2;
+    }
+
+    #info-first-col{
+      padding: 0;
+      font-family: EmbArialBold;
+      font-weight: normal;
+    }
+
+    #info-third-col{
+      padding: 0;
+      text-align: right;
+      font-family: EmbArialBold;
+      font-weight: normal;
+      vertical-align: bottom;
+      padding-right: 10px;
+    }
+
+    .customer-details-table{
+      margin-top: 30px;
+      border-collapse: collapse;
       width: 100%;
-      height: 1px;
-      background-color: black;
-      z-index: -1;
+      font-size: 11px;
+      font-family: EmbArial;
     }
   </style>
 </head>
@@ -191,13 +186,7 @@
       <img src="${contextVariables.statementLogo!}" alt="statement_logo"
         style="width: 90px; height: 65px;display: inline-block;vertical-align: middle;margin-top: 5px;margin-left: 400px;" />
     </div>
-    <table style="
-          margin-top: 30px;
-          border-collapse: collapse;
-          width: 100%;
-          font-size: 11px;
-          font-family: EmbArial;
-        ">
+    <table class="customer-details-table">
       <tr>
         <td style="text-align: justify; padding: 5px; width: 52%;">
           <div style="margin-top: -20px;min-height: 110px;max-height: 110px;">
@@ -227,54 +216,41 @@
             </#if>
           </div>
         </td>
-        <td style="text-align: justify; padding-left: 40px;padding-bottom:5px ;">
-            <table style="
-                font-weight: normal;
-                border-spacing: 0;
-                border-collapse: collapse;
-                margin-top: 20px;
-                display: inline-block;
-                font-size: 11px;
-                font-family: EmbArial;
-                line-height: 1.2;
-              ">
+        <td style="text-align: justify; padding-left: 40px;padding-bottom:5px;">
+            <table class="info-table">
               <tr>
-                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                  TARIKH PENYATA <br /><span style="font-family: EmbArialItalic;">STATEMENT DATE</span>
+                <th class="not-bold" id="info-first-col">
+                  TARIKH PENYATA <br /><span class="font-italic">STATEMENT DATE</span>
                 </th>
                 <td class="padding-td">:</td>
-                <td class="break"
-                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
+                <td class="break" id="info-third-col">
                   ${contextVariables.statementDate!}</td>
               </tr>
               <tr>
-                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
+                <th class="not-bold" id="info-first-col">
                   HALAMAN <br />
-                  <span style="font-family: EmbArialItalic;">PAGE</span>
+                  <span class="font-italic">PAGE</span>
                 </th>
                 <td class="padding-td">:</td>
-                <td class="page-info"
-                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;padding-top: 10px;padding-right: 10px;">
+                <td class="page-info" id="info-third-col" style="padding-top: 10px;">
                 </td>
               </tr>
               <tr>
-                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;width: 10px;">
+                <th class="not-bold" id="info-first-col" style="width: 10px;">
                   NOMBOR AKAUN <br />
-                  <span style="font-family: EmbArialItalic;">ACCOUNT NUMBER</span>
+                  <span class="font-italic">ACCOUNT NUMBER</span>
                 </th>
                 <td class="padding-td">:</td>
-                <td class="break"
-                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom; width: 170px;padding-right: 10px;">
+                <td class="break" id="info-third-col" style="width: 170px;">
                   ${contextVariables.header.customerAccountNumber!}
                 </td>
               </tr>
               <tr>
-                <th class="not-bold" style="padding: 0;font-family: EmbArialBold;font-weight: normal;">
-                  CAWANGAN <br /><span style="font-family: EmbArialItalic;">BRANCH</span>
+                <th class="not-bold" id="info-first-col">
+                  CAWANGAN <br /><span class="font-italic">BRANCH</span>
                 </th>
                 <td class="padding-td">:</td>
-                <td class="break"
-                  style="padding: 0;text-align: right;font-family: EmbArialBold;font-weight: normal;vertical-align: bottom;padding-right: 10px;">
+                <td class="break" id="info-third-col">
                   ${contextVariables.header.branchName!}</td>
               </tr>
             </table>              
@@ -282,22 +258,20 @@
       </tr>
     </table>
     <#if contextVariables.header.gainFlag?? && contextVariables.header.gainFlag?lower_case=='y'>
-    <!-- Code to execute if the condition is true -->
-    <div style="margin-top: 10px;padding-left: 8px;">
-      <span style="font-family: EmbArialBold;font-weight: normal;">PENYATA AKAUN /</span> <span
-        style="font-family: EmbArialItalicBold; font-weight: normal;">ACCOUNT STATEMENT</span><br />
+    <div class="common-div">
+      <span class="font-bold">PENYATA AKAUN /</span> <span
+        class="font-italic-bold">ACCOUNT STATEMENT</span><br />
           <span>AKAUN SEMASA /</span> <span style="font-family: EmbArialItalic;">CURRENT ACCOUNT</span><br />
       <span>(Tidak dilindungi oleh PIDM. / <span style="font-family: EmbArialItalic; font-weight: normal;">Not
           protected by PIDM.</span>)</span>
     </div>
     <#else>
-      <!-- Code to execute if the condition is false -->
-      <div style="margin-top: 10px;padding-left: 8px;">
-        <span style="font-family: EmbArialBold;font-weight: normal;">PENYATA AKAUN /</span> <span
-          style="font-family: EmbArialItalicBold; font-weight: normal;">ACCOUNT STATEMENT</span><br />
-            <span>AKAUN SEMASA /</span> <span style="font-family: EmbArialItalic;">CURRENT ACCOUNT</span><br />
+      <div class="common-div">
+        <span class="font-bold">PENYATA AKAUN /</span> <span
+          class="font-italic-bold">ACCOUNT STATEMENT</span><br />
+            <span>AKAUN SEMASA /</span> <span class="font-italic">CURRENT ACCOUNT</span><br />
         <span>(Dilindungi oleh PIDM setakat RM250,000 bagi setiap pendeposit. /</span><br />
-        <span style="font-family: EmbArialItalic;">Protected by PIDM up to RM250,000 for each depositor.)</span>
+        <span class="font-italic">Protected by PIDM up to RM250,000 for each depositor.)</span>
       </div>
   </#if>
   </header>
@@ -307,19 +281,17 @@
       <thead style="vertical-align: top;">
         <tr>
           <th class="transaction-table-header" style="width: 70px; max-width: 70px;">TARIKH<br /><span
-              style="font-family: EmbArialItalic;font-weight: normal;">DATE</span></th>
+              class="font-italic">DATE</span></th>
           <th class="transaction-table-header">
-            KETERANGAN<br /><span style="font-family: EmbArialItalic;font-weight: normal;">DESCRIPTION</span>
+            KETERANGAN<br /><span class="font-italic">DESCRIPTION</span>
           </th>
-          <th class="transaction-table-header" style="width: 100px; max-width: 100px;">DEBIT<br /><span
-              style="font-family: EmbArialItalic;font-weight: normal;">DEBIT</span><br /><span
-              style="font-family: EmbArial;font-weight: normal;">(${contextVariables.header.currencyType!})</span></th>
-          <th class="transaction-table-header" style="width: 100px; max-width: 100px;">KREDIT<br /><span
-              style="font-family: EmbArialItalic;font-weight: normal;">CREDIT</span><br /><span
-              style="font-family: EmbArial;font-weight: normal;">(${contextVariables.header.currencyType!})</span></th>
-          <th class="transaction-table-header" style="width: 100px; max-width: 100px;">BAKI<br /><span
-              style="font-family: EmbArialItalic;font-weight: normal;">BALANCE</span><br /><span
-              style="font-family: EmbArial;font-weight: normal;">(${contextVariables.header.currencyType!})</span></th>
+          <th class="transaction-table-header" id="common-td-header-width">DEBIT<br /><span
+            class="font-italic">DEBIT</span><br /><span
+              class="font-normal">(${contextVariables.header.currencyType!})</span></th>
+          <th class="transaction-table-header" id="common-td-header-width">KREDIT<br /><span
+            class="font-italic">CREDIT</span><br /><span class="font-normal">(${contextVariables.header.currencyType!})</span></th>
+          <th class="transaction-table-header" id="common-td-header-width">BAKI<br /><span
+            class="font-italic">BALANCE</span><br /><span class="font-normal">(${contextVariables.header.currencyType!})</span></th>
         </tr>
       </thead>
       <tbody>
@@ -336,7 +308,7 @@
         </#if>
         <#list contextVariables.statements as row>
           <tr>
-            <td class="break" style="vertical-align: top;padding: 5px;">${row.trxDate!}</td>
+            <td class="break" id="common-td-body-width">${row.trxDate!}</td>
             <td class="break" style="text-align: left;vertical-align: top;padding: 5px;">
               <#list row.description?split("|") as sValue>
                 <#if sValue?trim?length gt 0>
@@ -344,98 +316,16 @@
                 </#if>
               </#list>
             </td>
-            <td class="break" style="text-align: right;vertical-align: top;padding: 5px;">
+            <td class="break" id="common-td-body-width">
               ${row.transactionAmountForDebit!}</td>
-            <td class="break" style="text-align: right;vertical-align: top;padding: 5px;">
+            <td class="break" id="common-td-body-width">
               ${row.transactionAmountForCredit!}</td>
-            <td class="break" style="text-align: right;vertical-align: top;padding: 5px;">
+            <td class="break" id="common-td-body-width">
               ${row.runningBalance!}</td>
           </tr>
         </#list>
       </tbody>
     </table>
-
-    <!-- <div style="page-break-inside: avoid;">
-      <div class="container" style="page-break-inside: avoid;">
-        <div class="section-title">RINGKASAN AKAUN / SUMMARY OF ACCOUNT</div>
-        <div class="summary">
-          <table>
-            <tr>
-              <td style="width: 167px; text-align: left;font-family: EmbArialBold; font-weight: normal;">TOTAL DEBIT
-              </td>
-              <td style="width: 70px; text-align: right;">${contextVariables.header.noOfDebit!}</td>
-              <td style="width: 100px; text-align: right;padding-right: 4px;">${contextVariables.header.amountOfDebit!}
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td style="width: 167px; text-align: left;font-family: EmbArialBold; font-weight: normal;">TOTAL CREDIT
-              </td>
-              <td style="width: 70px; text-align: right">${contextVariables.header.noOfCredit!}</td>
-              <td style="width: 100px; text-align: right; padding-right: 4px;">
-                ${contextVariables.header.amountOfCredit!}</td>
-            </tr>
-              <tr>
-                <td style="width: 167px; text-align: left;font-family: EmbArialBold; font-weight: normal;">
-                  TOTAL CHEQUE (FLOAT)
-                </td>
-                <td style="width: 70px; text-align: right"></td>
-                <td style="width: 100px; text-align: right;padding-right: 4px;">${contextVariables.header.totalCheque}
-                </td>
-              </tr>
-            <tr>
-              <td style="width: 167px; text-align: left;font-family: EmbArialBold; font-weight: normal;">
-                MONTHLY AVERAGE &#160;( ${contextVariables.header.currencyType!} &#160;&#160;)
-              </td>
-              <td style="width: 70px; text-align: right"></td>
-              <td style="width: 100px; text-align: right">
-                <#if contextVariables.header.monthlyAverage?string?contains("-")>
-                  ${contextVariables.header.monthlyAverage}
-                  <#else>
-                    ${contextVariables.header.monthlyAverage}&#160;
-                </#if>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <#if contextVariables.header.message?has_content>
-          <div class="section-title">MESEJ / MESSAGES</div>
-          <div class="messages">
-            <table>
-              <tr>
-                <td>
-                  <#compress>
-                    <#if contextVariables.header.message??>
-                      <#list contextVariables.header.message?split("|") as sValue>
-                        <#if sValue?trim?length gt 0>
-                          ${sValue}<#if sValue?has_next><br /></#if>
-                        </#if>
-                      </#list>
-                    </#if>
-                  </#compress>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </#if>
-      </div>
-      <div class="notes">
-        Sekiranya anda mendapati sebarang perbezaan, sila maklumkan kepada pihak
-        Bank di dalam tempoh 14 hari daripada tarikh penyata ini. Jika tiada
-        perbezaan, penyata ini akan dianggap betul.<br />
-        <span style="font-family: EmbArialItalic; font-weight: normal;">If you note any discrepancies, please advise the
-          Bank within 14 days
-          from the date of this statement, otherwise this account statement is
-          considered to be correct.</span><br />
-        Untuk pertanyaan, ajukan kepada / <span style="font-family: EmbArialItalic; font-weight: normal;">For enquiries,
-          please channel to:</span><br />
-        Jabatan Khidmat Pelanggan <span style="font-family: EmbArialItalic; font-weight: normal;">(Customer Care
-          Department)</span>, Tingkat 17, Menara
-        Bank Islam, No 22, Jalan Perak, 50450 Kuala Lumpur. <br />Tel: 03-26 900 900 /
-        Faks: 03-2782 1337. Emel / <span style="font-family: EmbArialItalic; font-weight: normal;">Email:</span>
-        <span class="overlap-underline">contactcenter@bankislam.com.my</span>
-      </div>
-    </div> -->
   </main>
 </body>
 </html>
