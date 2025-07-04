@@ -754,7 +754,7 @@
           </tr>
         </#if>
 
-        <#list contextVariables.transactions as row>
+        <#list contextVariables.transactions! as row>
           <tr>
             <td class="break" style="vertical-align: top;padding: 5px;border-bottom: hidden;">${row.transactionDate!}
             </td>
