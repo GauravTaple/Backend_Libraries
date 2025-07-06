@@ -20,6 +20,5 @@ Backend_Libraries/
 ## 🚀 Getting Started
 
 ### 1. Clone this repo
-```bash
 git clone https://github.com/GauravTaple/Backend_Libraries.git
 cd Backend_Libraries
